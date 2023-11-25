@@ -199,42 +199,51 @@ const Navbar = () => {
       {open && (
         <MobileMenu open={open}>
           <MobileLink
-          href='#about'
           onClick={()=> {
             setOpen(!open);
-          }}
-          > About
+          }}>
+          <NavLink href='#about'>
+          About
+          </NavLink>
+           
           </MobileLink>
           <MobileLink
-          href="#skills"
+          
           onClick={()=> {
             setOpen(!open);
-          }}
-          > Skills
-          </MobileLink>
-
-          <MobileLink
-          href="#projects"
-          onClick={()=> {
-            setOpen(!open);
-          }}
-          > Projects
+          }}>
+            <NavLink href="#skills">
+            Skills
+            </NavLink>
+           
           </MobileLink>
 
           <MobileLink
-          href="#education"
+          
           onClick={()=> {
             setOpen(!open);
-          }}
-          > Education
+          }}>
+            <NavLink href="#projects">
+            Projects
+            </NavLink>
+          
+          </MobileLink>
+
+          <MobileLink
+          
+          onClick={()=> {
+            setOpen(!open);
+          }}>
+           <NavLink href="#education">Education</NavLink>
           </MobileLink>
 
             <MobileLink
-            href="#contact"
+            
             onClick={()=> {
               setOpen(!open);
             }}
-            > Contact
+            > 
+            <NavLink href="#contact">Contact</NavLink>
             </MobileLink>
           <GithubButton
           style={{
@@ -248,7 +257,12 @@ const Navbar = () => {
           href="/"
           target="_blank"
           >
+            <Link style={{
+              color: "white"
+            }} to={Bio.github} target='display'>
             Gitbhub
+            </Link>
+          
           </GithubButton>
           
           

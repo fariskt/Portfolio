@@ -7,6 +7,7 @@ import { FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import {Bio} from "../../data/constants";
 import { Link } from "react-router-dom";
+import { colors } from "@mui/material";
 
 const Social = styled.div`
 
@@ -21,7 +22,6 @@ const Social = styled.div`
 `;
 
 const LogoContainer = styled.div`
-color: rgba(200, 208, 208, 0.9);
 position: relative;
 top: 50px;
 
@@ -44,6 +44,7 @@ top: 50px;
 }
 @media (max-width:768px){
   top:30px;
+  color:white;
 }
 `;
 
@@ -51,7 +52,7 @@ const Desc = styled.div`
   @media screen and (max-width: 768px) {
     font-size: 16px;
     position:relative;
-    bottom:60px;
+    bottom:20px;
    
   }
 `;
@@ -68,22 +69,22 @@ const Copyright = styled.div`
 
 function Footer() {
   return (
-    <Social>
+    <Social >
       <LogoContainer>
         <div className="logos">
-       <Link to={Bio.github} target="display">
+       <Link to={Bio.github} target="display" style={{color:"white"}}>
        <FaGithub  />
        </Link>
-       <Link to={Bio.linkedin} target="display">
+       <Link to={Bio.linkedin} target="display" style={{color:"white"}}>
        <FaLinkedin />
        </Link>
-       <Link to={Bio.insta} target="display">
+       <Link to={Bio.insta} target="display" style={{color:"white"}}>
        <FaInstagram />
        </Link>
-         <Link to={Bio.twitter} target="display">
+         <Link to={Bio.twitter} target="display" style={{color:"white"}}>
          <FaTwitter />
          </Link>
-         <Link to={Bio.facebook} target="display">
+         <Link to={Bio.facebook} target="display" style={{color:"white"}}>
          <FaFacebook />
          </Link>
          

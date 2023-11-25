@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {Bio} from '../../data/constants';
 import TypewriterComponent from 'typewriter-effect';
-import HeroImage from "../../images/HeroImage.JPG";
+import Profile from "../../images/Profile.jpg";
 import HeroBgAnimation from "../HeroBgAnimation/HeroBgAnimation"
 
 const HeroContainer = styled.div`
@@ -233,8 +233,8 @@ const Hero = () => {
             <Subtitles>{Bio.description}</Subtitles>
             <ResumeButton href={Bio.resume} target="display">Check Resume</ResumeButton>
           </HeroLeftContainer>
-          <HeroRightContainer>
-            <Image src={HeroImage} alt="Image"/>
+          <HeroRightContainer>https
+            <Image src={Profile} alt="Image"/>
           </HeroRightContainer>
         </HeroInnerContainer>
       </HeroContainer>

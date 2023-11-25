@@ -66,7 +66,7 @@ const ToggleButton = styled.div`
   border-radius: 6px;
 
   ${({ active, theme }) =>
-    active && ` background-color: ${theme.primary + 20};`}
+    active && ` background-color: ${theme.primary + 40};`}
   &:hover {
     background-color: ${({ theme }) => theme.primary + 10};
   }

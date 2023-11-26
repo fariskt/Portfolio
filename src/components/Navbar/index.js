@@ -120,7 +120,7 @@ height: 70%;
 `;
 
 const Span = styled.span`
-padding: 0.8rem;
+padding: 0.5rem;
 font-weight: bold;
 font-size: 18px;
 `;
@@ -173,7 +173,7 @@ const Navbar = () => {
             marginBottom: "20",
             cursor: "pointer"
           }}>
-            <CgProfile  /> <Span>Portfolio</Span>
+            <CgProfile/> <Span>Portfolio</Span>
           </a>
           </NavLogo>
         

@@ -233,7 +233,7 @@ const Hero = () => {
             <Subtitles>{Bio.description}</Subtitles>
             <ResumeButton href={Bio.resume} target="display">Check Resume</ResumeButton>
           </HeroLeftContainer>
-          <HeroRightContainer>https
+          <HeroRightContainer>
             <Image src={Profile} alt="Image"/>
           </HeroRightContainer>
         </HeroInnerContainer>

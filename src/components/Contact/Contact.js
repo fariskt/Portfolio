@@ -139,27 +139,6 @@ const Span = styled.div`
   }
 `;
 
-const TopIcon = styled.div`
-  margin-left: auto; 
-  margin-right: 0;
-  .topp{
-    font-size: 50px;
-    rotate: -90deg;
-    cursor:pointer;
-    border-radius: 50%;
-  }
-  a{
-    color:rgba(59, 58, 97, 0.7);
-    scroll-behaviour:smooth;
-    :hover{
-      background-color: rgba(59, 58, 97, 0.4);
-    }
-    @media (max-width:768px){
-      display:none;
-    }
-  }
-  
-`;
 
 
 const Contact = () => {
@@ -211,11 +190,6 @@ const Contact = () => {
       <button type='submit'>Submit</button>
         </form> 
       </Form>
-      <TopIcon >
-        <a href="#">
-      <IoArrowForwardCircleSharp className='topp'/>
-      </a>
-      </TopIcon>
       
       </Wrapper>
     </Container>

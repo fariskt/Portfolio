@@ -17,8 +17,8 @@ const Social = styled.div`
   background-color: ${({ theme }) => theme.card_light};
   border-top: 1px solid ${({ theme }) => theme.primary + 29};
   @media (max-width: 768px){
-    height: 400px;
-  }
+    height: 150px;
+  };
 `;
 
 const LogoContainer = styled.div`

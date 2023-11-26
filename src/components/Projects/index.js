@@ -133,12 +133,15 @@ const Projects = () => {
         </ToggleGroup>
 
         <CardContainer>
+          
           {toggle === "all" && projects.map((project)=> 
             <ProjectCards project={project} />
           )}
-          {projects.filter((item)=> item.category == toggle).map((project)=> (
-            <ProjectCards project={project}/>
-          ))}
+          {
+          projects.filter((item)=> item.category == toggle).map((project)=> (
+              <ProjectCards project={project} />
+
+          ))}  
         </CardContainer>
       </Wrapper>
     </Container>

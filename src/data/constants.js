@@ -190,34 +190,20 @@ export const Bio = {
       github: "https://github.com/fariskt/quote",
       webapp: "https://fariskt.github.io/quote/",
     },
-     
     {
-      id: 3,
-      title: "Buckoid",
-      date: "Dec 2021 - Apr 2022",
+
+      id: 1,
+      title: "Lorem App",
+      date: "Apr 2023 - May 2023",
       description:
-        "App Is Currently In Playstore 100+ Downloads. This Project proposes an “Expense Tracking App”. Keep track of your personal expenses and compare them to your monthly income with the budget planner. It has Google Drive Cloud API for Backup of User Room Database. Made with Kotlin in MVVM Architecture & Live Data.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing. at hic voluptatem officiis, perferendis cumque nostrum sed! Enim dolore harum culpa. Corrupti, error",
       image:
-        "https://camo.githubusercontent.com/fbf405040ae86b5d4a40f24e4ac034982cb8c0e2d850560ba64527997b258be8/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f6c6f67696e2d65613565322e61707073706f742e636f6d2f6f2f4255434b4f49442532302831292e706e673f616c743d6d6564696126746f6b656e3d32653735376235372d323964372d346263612d613562322d653164346538313432373435",
-      tags: ["Kotlin", "MVVM", "Room Database", "Google Drive Cloud API"],
+        "https://cdn.pixabay.com/photo/2023/09/01/22/16/keyboard-8227845_640.png",
+      tags: ["React Js", "Html","Css"],
       category: "android app",
-      github: "https://github.com/rishavchanda/Buckoid-Android-App",
-      webapp: "https://play.google.com/store/apps/details?id=com.rishav.buckoid",
+      github: "github.com/fariskt/weather-app",
+      webapp: "https://fariskt.github.io/weather-app/",
     },
-    {
-      id: 4,
-      title: "Job Finding App",
-      date: "Jun 2023 - Jul 2023",
-      description:
-        "A Job Finding App made with React Native, Axios. Users can search for any job coming from API and apply there.",
-      image:
-        "https://user-images.githubusercontent.com/64485885/255237090-cf798a2c-1b41-4bb7-b904-b5353a1f08e8.png",
-      tags: ["React Native", "JavaScript", "Axios"],
-      category: "android app",
-      github: "https://github.com/rishavchanda/Job-finder-App",
-      webapp: "https://github.com/rishavchanda/Job-finder-App",
-    },
-   
-    
   ];
+    
   

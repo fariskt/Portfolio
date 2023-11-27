@@ -170,7 +170,7 @@ export const Bio = {
         "https://user-images.githubusercontent.com/113295885/285519907-dcf3509f-3424-42dc-8ecb-26769f327d0a.png",
       tags: ["React Js", "Html","Css"],
       category: "web app",
-      github: "github.com/fariskt/weather-app",
+      github: "https://github.com/fariskt/weather-app",
       webapp: "https://fariskt.github.io/weather-app/",
     },
     {

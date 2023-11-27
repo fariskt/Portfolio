@@ -150,7 +150,7 @@ export const Bio = {
       date: "Jun 2023 - Jul 2023",
       description:
       "Simple Calculator App using javascript",
-      image: "https://private-user-images.githubusercontent.com/113295885/285902795-3243bf2b-6532-436d-b77f-3e86b4b5b928.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDEwOTUxNjcsIm5iZiI6MTcwMTA5NDg2NywicGF0aCI6Ii8xMTMyOTU4ODUvMjg1OTAyNzk1LTMyNDNiZjJiLTY1MzItNDM2ZC1iNzdmLTNlODZiNGI1YjkyOC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBSVdOSllBWDRDU1ZFSDUzQSUyRjIwMjMxMTI3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDIzMTEyN1QxNDIxMDdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iZGUyMDZjMzcyNTBmN2QyNGUwYjRkMGFiZTQ5NTE1OGM5YTcyYzc3ZGExNmZkOWIzNDllY2QyM2M2YmM0NTg4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.JDPgIifoerehM7vnvmYrgiV4AFJEYN1KyJuHDDV0DPc",
+      image: "https://private-user-images.githubusercontent.com/113295885/285902795-3243bf2b-6532-436d-b77f-3e86b4b5b928.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDEwOTY4NTQsIm5iZiI6MTcwMTA5NjU1NCwicGF0aCI6Ii8xMTMyOTU4ODUvMjg1OTAyNzk1LTMyNDNiZjJiLTY1MzItNDM2ZC1iNzdmLTNlODZiNGI1YjkyOC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBSVdOSllBWDRDU1ZFSDUzQSUyRjIwMjMxMTI3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDIzMTEyN1QxNDQ5MTRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xN2YwNzE4NWEyMjFjYTEyODhlZDYzZmVjNzMwYmRmZjQ0YTE2ZDJhZTg5ZWI3M2IzYjg4ZjNjODAwNDdjNTY2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.ZU0wKV2ac-Fn0EIJHSqHiktybrp2pp3qDsPNcloLEHo",
       tags: [
         "Html",
         "Css",
@@ -192,7 +192,7 @@ export const Bio = {
     },
     {
 
-      id: 1,
+      id: 3,
       title: "Lorem App",
       date: "Apr 2023 - May 2023",
       description:
@@ -200,7 +200,7 @@ export const Bio = {
       image: "https://images.freeimages.com/variants/k1wQB7egQotJ7Hr3ZBPP1S5c/f4a36f6589a0e50e702740b15352bc00e4bfaf6f58bd4db850e167794d05993d",
       tags: ["React Js", "Html","Css"],
       category: "android app",
-      github: "github.com/fariskt/weather-app",
+      github: "https://github.com/fariskt/weather-app",
       webapp: "https://fariskt.github.io/weather-app/",
     },
   ];

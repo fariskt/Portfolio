@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ProjectCards from "../Cards/ProjectCards";
 import { projects } from "../../data/constants";
 
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -83,18 +84,16 @@ const Divider = styled.div`
 `;
 
 const CardContainer = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-flex-wrap: wrap;
-gap: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 28px;
 `;
 
-
-
-const Projects = () => {
+const Projects = ({openModal, setOpenModal}) => {
   const [toggle, setToggle] = useState("all");
-
+  
   return (
     <Container id="projects">
       <Wrapper>
@@ -103,17 +102,23 @@ const Projects = () => {
 
         <ToggleGroup>
           {toggle === "all" ? (
-            <ToggleButton active value="all" onClick={()=> setToggle("all")}>
+            <ToggleButton active value="all" onClick={() => setToggle("all")}>
               All
             </ToggleButton>
           ) : (
-            <ToggleButton value="all" onClick={()=> setToggle("all")}>All</ToggleButton>
+            <ToggleButton value="all" onClick={() => setToggle("all")}>
+              All
+            </ToggleButton>
           )}
 
           <Divider />
 
           {toggle === "web app" ? (
-            <ToggleButton active value="web app" onClick={() => setToggle("web app")}>
+            <ToggleButton
+            active
+            value="web app"
+            onClick={() => setToggle("web app")}
+            >
               Web APP
             </ToggleButton>
           ) : (
@@ -125,24 +130,35 @@ const Projects = () => {
           <Divider />
 
           {toggle === "android app" ? (
-          <ToggleButton active value="android app" onClick={()=> setToggle("android app")}>Android App</ToggleButton>
-          ): 
-          <ToggleButton value="android app" onClick={()=> setToggle("android app")}>Android App</ToggleButton>
-          }
-
-        </ToggleGroup>
-
-        <CardContainer>
-          
-          {toggle === "all" && projects.map((project)=> 
-            <ProjectCards project={project} />
+            <ToggleButton
+            active
+            value="android app"
+            onClick={() => setToggle("android app")}
+            >
+              Android App
+            </ToggleButton>
+          ) : (
+            <ToggleButton
+            value="android app"
+            onClick={() => setToggle("android app")}
+            >
+              Android App
+            </ToggleButton>
           )}
-          {
-          projects.filter((item)=> item.category == toggle).map((project)=> (
-              <ProjectCards project={project} />
-
-          ))}  
-        </CardContainer>
+        </ToggleGroup>
+        
+          <CardContainer>
+            {toggle === "all" &&
+              projects.map((project) => <ProjectCards project={project} openModal={openModal} setOpenModal={setOpenModal}/>)}
+            {projects 
+              .filter((item) => item.category == toggle)
+              .map((project) => (
+                
+                 <ProjectCards project={project} openModal={openModal} setOpenModal={setOpenModal}/>
+               
+               ))}
+               
+          </CardContainer>
       </Wrapper>
     </Container>
   );

@@ -203,6 +203,20 @@ export const Bio = {
       github: "https://github.com/fariskt/weather-app",
       webapp: "https://fariskt.github.io/weather-app/",
     },
+    {
+
+      id: 4,
+      title: "MovieSpace",
+      date: "Apr 2023 - May 2023",
+      description:
+      "Movie search app , search any popular movies and series you want.",
+      image:
+        "blob:https://vercel.com/8da5588e-2380-4021-8f44-0beb9068fc2e",
+      tags: ["React Js", "Html","Css", "OMDb Api"],
+      category: "web app",
+      github: "https://github.com/fariskt/MovieSpace",
+      webapp: "https://movie-space-faris-projects.vercel.app/",
+    },
   ];
     
   

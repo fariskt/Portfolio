@@ -54,7 +54,6 @@ function App() {
             {openModal.state && 
             <ProjectDetails openModal={openModal} setOpenModal={setOpenModal}/>
             }
-            <onCard/>
         </Body>
       </Router>
     </ThemeProvider>

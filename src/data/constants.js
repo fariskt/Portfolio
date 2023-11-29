@@ -215,7 +215,7 @@ export const Bio = {
       tags: ["React Js", "Html","Css", "OMDb Api"],
       category: "web app",
       github: "https://github.com/fariskt/MovieSpace",
-      webapp: "https://movie-space-faris-projects.vercel.app/",
+      webapp: "https://movie-space-nine.vercel.app/",
     },
   ];
     

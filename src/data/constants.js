@@ -211,7 +211,7 @@ export const Bio = {
       description:
       "Movie search app , search any popular movies and series you want.",
       image:
-        "blob:https://vercel.com/8da5588e-2380-4021-8f44-0beb9068fc2e",
+        "https://private-user-images.githubusercontent.com/113295885/286521757-aa2e2830-0d94-46f9-9784-97a43118fa47.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDEyNDU3MjksIm5iZiI6MTcwMTI0NTQyOSwicGF0aCI6Ii8xMTMyOTU4ODUvMjg2NTIxNzU3LWFhMmUyODMwLTBkOTQtNDZmOS05Nzg0LTk3YTQzMTE4ZmE0Ny5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBSVdOSllBWDRDU1ZFSDUzQSUyRjIwMjMxMTI5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDIzMTEyOVQwODEwMjlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jYTNlNWIyNzA0NjE2MGI4ZDQ0OThjZTg2MjUxMDA4ZWU3Njk5MWFjZWE2NDFkNzgxN2ExZDQ3ZGIzMGM2MzlhJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.ctiaivomJJWeYH5C9Pf5V_PcdNcO70pnXpUoeBjX37U",
       tags: ["React Js", "Html","Css", "OMDb Api"],
       category: "web app",
       github: "https://github.com/fariskt/MovieSpace",

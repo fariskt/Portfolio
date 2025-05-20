@@ -16,6 +16,7 @@ const Wrapper = styled.div`
   position: relative;
   display: flex;
   margin-bottom: 80px;
+  padding:0 20px;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -41,7 +42,7 @@ const Desc = styled.div`
   font-size: 18px;
   max-width: 600px;
   text-align:  center;
-  color: ${({theme})=> theme.text_secondary};
+  color: ${({theme})=> theme.text};
   @media screen and (max-width: 768px){
     font-size: 16px;
   }
@@ -74,8 +75,8 @@ const SkillsContainer = styled.div`
 `;
 
 const Skill = styled.div`
-  background-color: ${({ theme }) => theme.card || "#ffffff"};
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  background-color: ${({ theme }) => theme.card};
+  border: ${({ theme }) => theme.border};
   border-radius: 16px;
   padding: 24px 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
@@ -89,7 +90,7 @@ const Skill = styled.div`
 const SkillTitile = styled.h2`
   font-size: 20px;
   font-weight: 600;
-  color: ${({ theme }) => theme.text_primary || "#111"};
+  color: ${({ theme }) => theme.text};
   margin-bottom: 16px;
   text-align: center;
 `;

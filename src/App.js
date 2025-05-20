@@ -1,5 +1,5 @@
 import "./App.css";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Skills from "./components/Skills";
@@ -8,9 +8,11 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Projects from "./components/Projects";
 import ProjectDetails from "./components/Projects/ProjectDetails";
 import { useState } from "react";
+import { darkTheme, lightTheme } from "./utils/Themes";
 
 const Body = styled.div`
-  background-color: ${({ theme }) => theme.bg};
+  background-color: ${({ theme }) => theme.background};
+  color: ${({ theme }) => theme.text};
   width: 100%;
   height: 100%;
   overflow-x: hidden;
@@ -33,21 +35,29 @@ const Wrapper = styled.div`
 
 function App() {
   const [openModal, setOpenModal] = useState({ state: false, project: null });
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
     <Router>
-      <Navbar />
-      <Body>
-        <Hero />
-        <Wrapper>
-          <Skills />
-        </Wrapper>
-        <Projects openModal={openModal} setOpenModal={setOpenModal} />
-        <Education />
-        {openModal.state && (
-          <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
-        )}
-      </Body>
+      <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+        <Body>
+          <Hero />
+          <Wrapper>
+            <Skills />
+          </Wrapper>
+          <Projects openModal={openModal} setOpenModal={setOpenModal} />
+          <Education />
+          {openModal.state && (
+            <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
+          )}
+          <div>
+            <p style={{ textAlign: "center", marginBottom: "20px" }}>
+              Thank you for visiting
+            </p>
+          </div>
+        </Body>
+      </ThemeProvider>
     </Router>
   );
 }

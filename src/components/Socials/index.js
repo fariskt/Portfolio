@@ -12,35 +12,44 @@ import { colors } from "@mui/material";
 const Social = styled.div`
   height: 40px;
   width: 100%;
-  background-color: white;
-  border-top: 1px solid ${({ theme }) => theme.primary + 29};
+    background-color: ${({ theme }) => theme.background};
+  color: ${({ theme }) => theme.text};
+  
   @media (max-width: 768px) {
-    height: 150px;
+    height: 40px;
   }
 `;
+
+const Logos = styled.div`
+a {
+  background-color: ${({ theme }) => theme.background};
+  color: ${({ theme }) => theme.text};
+}
+
+`
 
 
 function Footer() {
   return (
     <Social>
       <div>
-        <div className="logos" style={{display: "flex", gap: "15px"}} id="#contact">
-          <Link to={Bio.github} target="display" style={{ color: "black" }}>
+        <Logos className="logos" style={{display: "flex", gap: "15px"}} id="#contact">
+          <Link to={Bio.github} target="display" >
             <FaGithub />
           </Link>
-          <Link to={Bio.linkedin} target="display" style={{ color: "black" }}>
+          <Link to={Bio.linkedin} target="display" >
             <FaLinkedin />
           </Link>
-          <Link to={Bio.insta} target="display" style={{ color: "black" }}>
+          <Link to={Bio.insta} target="display" >
             <FaInstagram />
           </Link>
-          <Link to={Bio.twitter} target="display" style={{ color: "black" }}>
+          <Link to={Bio.twitter} target="display" >
             <FaTwitter />
           </Link>
-          <Link to={Bio.facebook} target="display" style={{ color: "black" }}>
+          <Link to={Bio.facebook} target="display" >
             <FaFacebook />
           </Link>
-        </div>
+        </Logos>
       </div>
     </Social>
   );

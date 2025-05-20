@@ -38,3 +38,9 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #626970;
 }
+
+.bulb-container{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}

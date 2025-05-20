@@ -10,7 +10,7 @@ const Container = styled.div`
   position: relative;
   z-index: 1;
   align-items: center;
-  background-color: #ffffff; /* White background */
+  background-color: ${({ theme }) => theme.background};
   padding: 60px 20px;
 `;
 

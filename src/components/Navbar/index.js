@@ -1,22 +1,28 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useContext, useState } from "react";
+import styled, { css, ThemeContext } from "styled-components";
 import { CgProfile } from "react-icons/cg";
 import { IoMenu } from "react-icons/io5";
 import { Bio } from "../../data/constants";
 import { Link } from "react-router-dom";
+import Switch from "../Cards/Bulb";
 
 const Nav = styled.div`
-  background-color: ${({ theme }) => theme.card_light};
+  background-color: ${({ theme }) => theme.background};
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  position: sticky;
+  width: 100%;
   top: 0;
   z-index: 10;
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
+    position: sticky;
+  }
+  @media screen and (max-width: 960px) {
+    transition: 0.8s all ease;
+    position: sticky;
   }
 `;
 
@@ -55,19 +61,6 @@ const MobileIcon = styled.div`
     font-size: 1.5rem;
     cursor: pointer;
     color: ${({ theme }) => theme.text_primary};
-  }
-`;
-
-const NavItems = styled.ul`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 32px;
-  padding: 0 6px;
-  list-style: none;
-  @media screen and (max-width: 768px) {
-    display: none;
   }
 `;
 
@@ -122,6 +115,7 @@ const Span = styled.span`
   padding: 0.5rem;
   font-weight: bold;
   font-size: 18px;
+  color: ${({ theme }) => theme.text};
 `;
 
 const MobileMenu = styled.div`
@@ -154,11 +148,14 @@ const MobileLink = styled.div`
   }
 `;
 
-const Navbar = () => {
+const Navbar = ({ darkMode, setDarkMode }) => {
   const [open, setOpen] = useState(false);
 
   return (
     <Nav>
+      <div className="bulb-container" onClick={() => setDarkMode(!darkMode)}>
+        <Switch darkMode={darkMode} />
+      </div>
       <NavContainer>
         <NavLogo>
           <a
@@ -182,13 +179,6 @@ const Navbar = () => {
             }}
           />
         </MobileIcon>
-        <NavItems>
-          <NavLink href="#about">About</NavLink>
-          <NavLink href="#skills">Skills</NavLink>
-          <NavLink href="#projects">Projects</NavLink>
-          <NavLink href="#education">Education</NavLink>
-          <NavLink href="#contact">Contact</NavLink>
-        </NavItems>
         <ButtonContainer>
           <Link to={Bio.github} target="display">
             <GithubButton className="git">Github profile</GithubButton>
@@ -225,15 +215,7 @@ const Navbar = () => {
               setOpen(!open);
             }}
           >
-            <NavLink href="#education">Education</NavLink>
-          </MobileLink>
-
-          <MobileLink
-            onClick={() => {
-              setOpen(!open);
-            }}
-          >
-            <NavLink href="#contact">Contact</NavLink>
+            <NavLink href="#education">Experience</NavLink>
           </MobileLink>
           <GithubButton
             style={{
@@ -249,7 +231,8 @@ const Navbar = () => {
           >
             <Link
               style={{
-                color: "white",
+                color: "black",
+                textDecoration: "none",
               }}
               to={Bio.github}
               target="display"

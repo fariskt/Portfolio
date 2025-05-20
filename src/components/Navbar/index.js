@@ -55,12 +55,12 @@ const MobileIcon = styled.div`
   @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
-    top: 0;
+    top: 5px;
     right: 0;
     transform: translate(-100%, 50%);
     font-size: 1.5rem;
     cursor: pointer;
-    color: ${({ theme }) => theme.text_primary};
+    color: ${({ theme }) => theme.text};
   }
 `;
 

@@ -13,7 +13,7 @@ const HeroContainer = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
-  padding: 80px 30px;
+  padding: 50px 30px;
 
   @media screen and (max-width: 960px) {
     padding: 66px 16px;

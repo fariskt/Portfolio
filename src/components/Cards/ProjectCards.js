@@ -7,7 +7,7 @@ const Card = styled.div`
     background-color: ${({theme})=> theme.card};
     cursor: pointer;
     border-radius: 10px;
-    box-shadow: 0 0 12px 4px rgba(0,0,0,0.4);
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0.1);
     overflow: hidden;
     transition: all 0.5s ease-in-out;
     padding: 26px 20px;
@@ -16,9 +16,8 @@ const Card = styled.div`
     gap: 14px;
 
     &:hover{
-        transform: translateY(-10px);
-        box-shadow: 0 0 50px 4px rgba(0,0,0,0.6);
-        filter: brightness(1.1);
+        transform: translateY(-5px);
+        // filter: brightness(1.1);
     }
 `;
 
@@ -45,7 +44,8 @@ const Tag = styled.span`
     font-weight: 400;
     color: ${({theme})=> theme.primary};
     padding: 2px 8px;
-    background-color: ${({theme})=> theme.primary+15};
+    background-color: ;
+    border:1px solid #cdd4cf;
     border-radius: 10px; 
 `;
 

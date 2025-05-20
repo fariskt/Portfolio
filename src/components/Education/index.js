@@ -6,8 +6,8 @@ import TimelineDot from '@mui/lab/TimelineDot';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import { education } from '../../data/constants';
-import EducationCard from '../Cards/EducationCard';
+import {  timeline } from '../../data/constants';
+import TimeLineCard from '../Cards/TimeLineCard';
 
 const Container = styled.div`
   display:flex;
@@ -71,11 +71,11 @@ const Education = () => {
   return (
     <Container id="education">
     <Wrapper>
-        <Title>Education</Title>
-        <Desc>Here are My Qualifications</Desc>
+        <Title>Timeline</Title>
+        <Desc>Here are My Journey</Desc>
         <TimeLineSection>
             <Timeline>
-           {education.map((education, index)=> (
+           {timeline.map((education, index)=> (
             <TimelineItem>
                <TimelineSeparator>
                 <TimelineDot variant='outlined' color='secondary'/>
@@ -84,7 +84,7 @@ const Education = () => {
                 )}
                 </TimelineSeparator>
                 <TimelineContent sx={{py: "12px", px: 2}}>
-                    <EducationCard education={education} />
+                    <TimeLineCard education={education} />
                 </TimelineContent>
                 
             </TimelineItem>

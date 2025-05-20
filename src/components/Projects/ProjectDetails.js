@@ -24,7 +24,7 @@ border-radius: 16px;
 margin: 50px 12px;
 height: min-content;
 background-color: ${({ theme }) => theme.card};
-color: ${({ theme }) => theme.text_primary};
+color: white;
 padding: 20px;
 display: flex;
 flex-direction: column;
@@ -68,6 +68,7 @@ const Desc = styled.div`
 const Image = styled.img`
     width: 100%;
     object-fit: cover;
+    max-height :400px;
     border-radius: 12px;
     margin-top: 30px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
@@ -96,11 +97,11 @@ const Tags = styled.div`
 const Tag = styled.div`
     font-size: 14px;
     font-weight: 400;
-    color: ${({ theme }) => theme.primary};
+    color: white;
     margin: 4px;
     padding: 4px 8px;
     border-radius: 8px;
-    background-color: ${({ theme }) => theme.primary + 20};
+    border:1px solid rgb(99, 99, 99);
     @media only screen and (max-width: 600px) {
         font-size: 12px;
     }
@@ -153,32 +154,51 @@ const ButtonGroup = styled.div`
     margin: 12px 0px;
     gap: 12px;
 `;
-
 const Button = styled.a`
-    width: 100%;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 600;
-    color: ${({ theme }) => theme.text_primary};
-    padding: 12px 16px;
-    border-radius: 8px;
-    background-color: ${({ theme }) => theme.primary};
-    ${({ dull, theme }) => dull && `
-        background-color: ${theme.bgLight};
-        color: ${theme.text_secondary};
-        &:hover {
-            background-color: ${({ theme }) => theme.bg + 99};
-        }
-    `}
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.5s ease;
-    &:hover {
-        background-color: ${({ theme }) => theme.primary + 99};
-    }
-    @media only screen and (max-width: 600px) {
-        font-size: 12px;
-    }
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background-color:rgb(1, 10, 27); /* Tailwind gray-600 */
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color:rgb(3, 19, 41); /* Tailwind gray-700 */
+    border-color: #4b5563;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 14px;
+  }
+`;
+
+const Button2 = styled.a`
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 12px 16px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  background-color:rgb(6, 134, 47); /* Tailwind gray-900 */
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color:rgb(0, 145, 39);
+    border-color: #4b5563; /* Hover border lighter */
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 14px;
+  }
 `;
 
 
@@ -209,7 +229,7 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
 
                     <ButtonGroup>
                         <Button dull href={project?.github} target='new'>View Code</Button>
-                        <Button href={project?.webapp} target='new'>View Live App</Button>
+                        <Button2 href={project?.webapp} target='new'>View Live App</Button2>
                     </ButtonGroup>
                 </Wrapper>
             </Container>

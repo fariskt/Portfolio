@@ -109,6 +109,26 @@ const Description = styled.div`
 `;
 
 
+const Tags = styled.div`
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+    align-items: center;
+`;
+
+const Tag = styled.span`
+    font-size: 12px;
+    font-weight: 400;
+    color: ${({theme})=> theme.primary};
+    padding: 2px 8px;
+    background-color: ;
+    border:1px solid #cdd4cf;
+    border-radius: 10px; 
+`;
+
+
 //document component
 // const Document = styled.div`
 //     height: 70px;
@@ -131,11 +151,15 @@ const EducationCard = ({education}) => {
                 <Role>{education.school}</Role>
                 <Degree>{education.degree}</Degree>
                 <Duration>{education.date}</Duration>
-                <Grade>Grade: {education.grade}</Grade>
             </Body>
         </Top>
         <Description>{education.desc}
         </Description>
+        <Tags>
+            {education.skills?.map((tag)=> (
+                <Tag key={tag}>{tag}</Tag>
+            ))}
+        </Tags>
     </Card>
   )
 }

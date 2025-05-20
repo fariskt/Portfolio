@@ -72,7 +72,7 @@ const StyledWrapper = styled.div`
     width: 1.2em;
     height: 1em;
     box-sizing: border-box;
-  }
+  }y
 
   ${({ darkMode }) =>
     darkMode &&

@@ -5,7 +5,6 @@ import Socials from "../Socials/index";
 import Navbar from "../Navbar";
 import { motion } from "framer-motion";
 
-// Styled components with motion
 const HeroContainer = styled.div`
   display: flex;
   justify-content: center;

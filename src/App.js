@@ -7,7 +7,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Projects from "./components/Projects";
 import ProjectDetails from "./components/Projects/ProjectDetails";
 import { useEffect, useRef, useState } from "react";
-import bgVideo from "./assets/bg3.mp4";
+import bgVideo from "./assets/bg-mobile.mp4";
 
 const Body = styled.div`
   background-color: #121212;
@@ -29,11 +29,13 @@ const VideoBackground = styled.video`
 
 function App() {
   const [openModal, setOpenModal] = useState({ state: false, project: null });
-  const [selectBg, setSelectBg] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
   const videoRef = useRef(null);
 
   const rafId = useRef(null);
   const targetTime = useRef(0);
+
   useEffect(() => {
     const video = videoRef.current;
     const maxScroll = document.body.scrollHeight - window.innerHeight;
@@ -46,10 +48,11 @@ function App() {
 
       if (Math.abs(diff) > 0.01) {
         // Smooth interpolation
-        video.currentTime += diff * 0.5;
+        video.currentTime += diff * 0.1; // Slower = smoother
         rafId.current = requestAnimationFrame(updateVideoTime);
       } else {
         video.currentTime = targetTime.current;
+        // Don't immediately cancel, just stop updating
       }
     };
 
@@ -60,6 +63,7 @@ function App() {
       const scrollRatio = scrollY / maxScroll;
       targetTime.current = scrollRatio * video.duration;
 
+      // Only start animation; don't cancel it too early
       cancelAnimationFrame(rafId.current);
       rafId.current = requestAnimationFrame(updateVideoTime);
     };
@@ -72,9 +76,14 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    const isMobileDevice = window.innerWidth < 768;
+    setIsMobile(isMobileDevice);
+  }, []);
+
   return (
     <Router>
-      <VideoBackground
+      {!isMobile && <VideoBackground
         ref={videoRef}
         preload="auto"
         disablePictureInPicture
@@ -82,7 +91,9 @@ function App() {
         muted
       >
         <source src={bgVideo} type="video/mp4" />
-      </VideoBackground>
+        Your browser does not support the video tag.
+      </VideoBackground>}
+
       <Body>
         <Hero />
         <Skills />

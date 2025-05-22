@@ -47,12 +47,10 @@ function App() {
       const diff = targetTime.current - current;
 
       if (Math.abs(diff) > 0.01) {
-        // Smooth interpolation
         video.currentTime += diff * 0.1; // Slower = smoother
         rafId.current = requestAnimationFrame(updateVideoTime);
       } else {
         video.currentTime = targetTime.current;
-        // Don't immediately cancel, just stop updating
       }
     };
 
@@ -62,8 +60,6 @@ function App() {
       const scrollY = window.scrollY;
       const scrollRatio = scrollY / maxScroll;
       targetTime.current = scrollRatio * video.duration;
-
-      // Only start animation; don't cancel it too early
       cancelAnimationFrame(rafId.current);
       rafId.current = requestAnimationFrame(updateVideoTime);
     };

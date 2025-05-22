@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { Bio } from "../../data/constants";
 import TypewriterComponent from "typewriter-effect";
-import Profile from "../../images/Profile.jpg";
-import HeroBgAnimation from "../HeroBgAnimation/HeroBgAnimation";
 import Socials from "../Socials/index";
 import Navbar from "../Navbar";
 import { motion } from "framer-motion";
@@ -18,13 +16,6 @@ const HeroContainer = styled.div`
   overflow: hidden;
 `;
 
-const HeroBg = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-`;
 
 const HeroInnerContainer = styled.div`
   display: flex;
@@ -48,16 +39,6 @@ const HeroLeftContainer = styled.div`
   }
 `;
 
-const HeroRightContainer = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: end;
-
-  @media screen and (max-width: 960px) {
-    justify-content: center;
-    margin-top: 40px;
-  }
-`;
 
 const Title = motion(styled.div`
   font-size: 52px;
@@ -104,10 +85,6 @@ const Hero = () => {
       <Navbar />
       <div id="about">
         <HeroContainer>
-          <HeroBg>
-            <HeroBgAnimation />
-          </HeroBg>
-
           <HeroInnerContainer>
             <HeroLeftContainer>
               <Title

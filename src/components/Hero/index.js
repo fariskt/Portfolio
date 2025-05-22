@@ -15,7 +15,6 @@ const HeroContainer = styled.div`
   overflow: hidden;
 `;
 
-
 const HeroInnerContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -28,6 +27,9 @@ const HeroInnerContainer = styled.div`
   @media screen and (max-width: 960px) {
     flex-direction: column;
   }
+  @media screen and (max-width: 612px) {
+    flex-direction: column;
+  }
 `;
 
 const HeroLeftContainer = styled.div`
@@ -37,7 +39,6 @@ const HeroLeftContainer = styled.div`
     text-align: center;
   }
 `;
-
 
 const Title = motion(styled.div`
   font-size: 52px;
@@ -66,6 +67,9 @@ const Subtitles = motion(styled.p`
   font-size: 18px;
   color: rgba(255, 255, 255, 0.85);
   margin-bottom: 20px;
+  @media screen and (max-width: 640px) {
+    text-align: left;
+  }
 `);
 
 const ResumeButton = motion(styled.a`

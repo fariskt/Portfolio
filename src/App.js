@@ -1,63 +1,102 @@
 import "./App.css";
 import styled, { ThemeProvider } from "styled-components";
-import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
 import { BrowserRouter as Router } from "react-router-dom";
 import Projects from "./components/Projects";
 import ProjectDetails from "./components/Projects/ProjectDetails";
-import { useState } from "react";
-import { darkTheme, lightTheme } from "./utils/Themes";
+import { useEffect, useRef, useState } from "react";
+import bgVideo from "./assets/bg3.mp4";
 
 const Body = styled.div`
-  background-color: ${({ theme }) => theme.background};
-  color: ${({ theme }) => theme.text};
+  background-color: #121212;
+  color: #ffffff;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
 `;
 
-const Wrapper = styled.div`
-  background: linear-gradient(
-      38.73deg,
-      rgba(204, 0, 187, 0.15) 0%,
-      rgba(201, 32, 184, 0) 50%
-    ),
-    linear-gradient(
-      141.27deg,
-      rgba(0, 70, 209, 0) 50%,
-      rgba(0, 70, 209, 0.15) 100%
-    );
+const VideoBackground = styled.video`
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 `;
 
 function App() {
   const [openModal, setOpenModal] = useState({ state: false, project: null });
-  const [darkMode, setDarkMode] = useState(true);
+  const [selectBg, setSelectBg] = useState(null);
+  const videoRef = useRef(null);
+
+  const rafId = useRef(null);
+  const targetTime = useRef(0);
+  useEffect(() => {
+    const video = videoRef.current;
+    const maxScroll = document.body.scrollHeight - window.innerHeight;
+
+    const updateVideoTime = () => {
+      if (!video || isNaN(video.duration)) return;
+
+      const current = video.currentTime;
+      const diff = targetTime.current - current;
+
+      if (Math.abs(diff) > 0.01) {
+        // Smooth interpolation
+        video.currentTime += diff * 0.5;
+        rafId.current = requestAnimationFrame(updateVideoTime);
+      } else {
+        video.currentTime = targetTime.current;
+      }
+    };
+
+    const handleScroll = () => {
+      if (!video || isNaN(video.duration)) return;
+
+      const scrollY = window.scrollY;
+      const scrollRatio = scrollY / maxScroll;
+      targetTime.current = scrollRatio * video.duration;
+
+      cancelAnimationFrame(rafId.current);
+      rafId.current = requestAnimationFrame(updateVideoTime);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      cancelAnimationFrame(rafId.current);
+    };
+  }, []);
 
   return (
     <Router>
-      <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-        <Body>
-          <Hero />
-          <Wrapper>
-            <Skills />
-          </Wrapper>
-          <Projects openModal={openModal} setOpenModal={setOpenModal} />
-          <Education />
-          {openModal.state && (
-            <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
-          )}
-          <div>
-            <p style={{ textAlign: "center", marginBottom: "20px" }}>
-              Thank you for visiting
-            </p>
-          </div>
-        </Body>
-      </ThemeProvider>
+      <VideoBackground
+        ref={videoRef}
+        preload="auto"
+        disablePictureInPicture
+        playsInline
+        muted
+      >
+        <source src={bgVideo} type="video/mp4" />
+      </VideoBackground>
+      <Body>
+        <Hero />
+        <Skills />
+        <Projects openModal={openModal} setOpenModal={setOpenModal} />
+        <Education />
+        {openModal.state && (
+          <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
+        )}
+        <div>
+          <p style={{ textAlign: "center", marginBottom: "20px" }}>
+            Thank you for visiting
+          </p>
+        </div>
+      </Body>
     </Router>
   );
 }

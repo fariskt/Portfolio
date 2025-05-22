@@ -42,10 +42,10 @@ const Tags = styled.div`
 const Tag = styled.span`
   font-size: 12px;
   font-weight: 400;
-  border: 1px solid #cdd4cf;
+  border: 1px solid rgb(121, 121, 121);
   color: ${({ theme }) => theme.text};
   padding: 2px 8px;
-  border: ${({ theme }) => theme.border || "#cdd4cf;"};
+  border:1px solidrgb(171, 171, 171);
   border-radius: 10px;
 `;
 

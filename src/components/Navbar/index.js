@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import Switch from "../Cards/Bulb";
 
 const Nav = styled.div`
-  background-color: ${({ theme }) => theme.background};
+  background-color: transparent;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -60,18 +60,18 @@ const MobileIcon = styled.div`
     transform: translate(-100%, 50%);
     font-size: 1.5rem;
     cursor: pointer;
-    color: ${({ theme }) => theme.text};
+    color: white;
   }
 `;
 
 const NavLink = styled.a`
-  color: black;
+  color: white;
   font-weight: 500;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   &:hover {
-    color: ${({ theme }) => theme.primary};
+    color: white;
   }
 `;
 
@@ -90,8 +90,8 @@ const ButtonContainer = styled.div`
 const GithubButton = styled.button`
   &.git {
     background-color: transparent;
-    color: ${({ theme }) => theme.primary};
-    border: 1.8px solid ${({ theme }) => theme.primary};
+    color: white;
+    border: 1.8px solid white;
     border-radius: 20px;
     justify-content: center;
     align-items: center;
@@ -115,7 +115,7 @@ const Span = styled.span`
   padding: 0.5rem;
   font-weight: bold;
   font-size: 18px;
-  color: ${({ theme }) => theme.text};
+  color: white;
 `;
 
 const MobileMenu = styled.div`
@@ -124,11 +124,13 @@ const MobileMenu = styled.div`
   justify-content: center;
   gap: 16px;
   position: absoulte;
-  top: 80;
+  top: 90;
   right: 0;
-  width: 100%;
+  width: 90%;
+  margin-right:10px;
+  margin-top:15px;
   padding: 12px 40px 24px 40px;
-  background: ${({ theme }) => theme.card_light + 99};
+  background:  rgba(58, 58, 58, 0.8);
   transition: all 0.4s ease-in-out;
   transform: ${({ open }) => (open ? "translateY(50%)" : "translateY(-100%)")};
   border-radius: 10px;
@@ -138,24 +140,21 @@ const MobileMenu = styled.div`
 `;
 
 const MobileLink = styled.div`
-  color: ${({ theme }) => theme.text_primary};
+  color: white;
   font-weight: 500;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   &:hover {
-    color: ${({ theme }) => theme.primary};
+    color: gray;
   }
 `;
 
-const Navbar = ({ darkMode, setDarkMode }) => {
+const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
     <Nav>
-      <div className="bulb-container" onClick={() => setDarkMode(!darkMode)}>
-        <Switch darkMode={darkMode} />
-      </div>
       <NavContainer>
         <NavLogo>
           <a

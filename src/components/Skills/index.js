@@ -1,12 +1,13 @@
-import React from 'react'
-import styled from 'styled-components'
-import { skills } from '../../data/constants'
+import React from "react";
+import styled from "styled-components";
+import { skills } from "../../data/constants";
 
 const Container = styled.div`
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
+  background-color: ${({ theme }) => theme.background};
   z-index: 1;
   align-items: center;
 `;
@@ -16,13 +17,12 @@ const Wrapper = styled.div`
   position: relative;
   display: flex;
   margin-bottom: 80px;
-  padding:0 20px;
+  padding: 0 20px;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   gap: 12px;
-
 `;
 
 const Title = styled.div`
@@ -30,9 +30,9 @@ const Title = styled.div`
   font-weight: 600;
   text-align: center;
   margin-top: 20px;
-  color: ${({theme})=> theme.text_primary};
+  color: ${({ theme }) => theme.text_primary};
 
-  @media (max-width: 480px){
+  @media (max-width: 480px) {
     font-size: 32px;
     margin-top: 12px;
   }
@@ -41,22 +41,20 @@ const Title = styled.div`
 const Desc = styled.div`
   font-size: 18px;
   max-width: 600px;
-  text-align:  center;
-  color: ${({theme})=> theme.text};
-  @media screen and (max-width: 768px){
+  text-align: center;
+  color: ${({ theme }) => theme.text};
+  @media screen and (max-width: 768px) {
     font-size: 16px;
   }
 `;
 
-
 const SkillList = styled.div`
-   display: flex;
-   justify-content: center;
-   flex-wrap: wrap;
-   gap: 12px;
-   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
 `;
-
 
 const SkillsContainer = styled.div`
   display: grid;
@@ -76,12 +74,11 @@ const SkillsContainer = styled.div`
 
 const Skill = styled.div`
   background-color: ${({ theme }) => theme.card};
-  border: ${({ theme }) => theme.border};
+  border: 1px solid gray;
   border-radius: 16px;
   padding: 24px 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
-
   &:hover {
     transform: translateY(-4px);
   }
@@ -113,41 +110,37 @@ const SkillItem = styled.div`
   }
 `;
 
-
 const SkillImage = styled.img`
-   width: 24px;
-   height: 24px;
+  width: 24px;
+  height: 24px;
 `;
-
-
 
 const Skills = () => {
   return (
-    <Container className='skills' id='skills'>
+    <Container className="skills" id="skills">
       <Wrapper>
         <Title>Skills</Title>
         <Desc>
           Here are some of my skills on which i have been working on my projects
         </Desc>
         <SkillsContainer>
-          {skills.map((item)=> (
+          {skills.map((item) => (
             <Skill>
               <SkillTitile>{item.title}</SkillTitile>
               <SkillList>
-                {item.skills.map((skill)=> (
+                {item.skills.map((skill) => (
                   <SkillItem>
                     <SkillImage src={skill.image} />
                     {skill.name}
                   </SkillItem>
                 ))}
               </SkillList>
-              
             </Skill>
           ))}
         </SkillsContainer>
       </Wrapper>
     </Container>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;

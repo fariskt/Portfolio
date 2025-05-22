@@ -12,8 +12,9 @@ import { colors } from "@mui/material";
 const Social = styled.div`
   height: 40px;
   width: 100%;
-    background-color: ${({ theme }) => theme.background};
-  color: ${({ theme }) => theme.text};
+    background-color:transparent;
+    margin-bottom:10px;
+  color:white;
   
   @media (max-width: 768px) {
     height: 40px;
@@ -22,8 +23,8 @@ const Social = styled.div`
 
 const Logos = styled.div`
 a {
-  background-color: ${({ theme }) => theme.background};
-  color: ${({ theme }) => theme.text};
+  color: white;
+  font-size:20px;
 }
 
 `

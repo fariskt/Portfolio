@@ -121,7 +121,7 @@ const Tag = styled.span`
   color: ${({ theme }) => theme.text};
   padding: 2px 8px;
   background-color: ;
-  border: ${({ theme }) => theme.border};
+  border: 1px solid rgb(121, 121, 121);
   border-radius: 10px;
 `;
 

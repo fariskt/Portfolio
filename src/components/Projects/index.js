@@ -8,7 +8,6 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   position: relative;
-  z-index: 1;
   align-items: center;
   background-color: ${({ theme }) => theme.background};
   padding: 60px 20px;
@@ -55,6 +54,7 @@ const CardContainer = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 30px;
+    z-index: 3;
   margin-top: 20px;
 `;
 

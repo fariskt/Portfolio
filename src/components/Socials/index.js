@@ -7,47 +7,49 @@ import { FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { Bio } from "../../data/constants";
 import { Link } from "react-router-dom";
-import { colors } from "@mui/material";
 
 const Social = styled.div`
   height: 40px;
   width: 100%;
-    background-color:transparent;
-    margin-bottom:10px;
-  color:white;
-  
+  background-color: transparent;
+  margin-bottom: 10px;
+  color: white;
+
   @media (max-width: 768px) {
     height: 40px;
   }
 `;
 
 const Logos = styled.div`
-a {
-  color: white;
-  font-size:20px;
-}
-
-`
-
+  a {
+    color: white;
+    z-index: 10;
+    font-size: 20px;
+  }
+`;
 
 function Footer() {
   return (
     <Social>
       <div>
-        <Logos className="logos" style={{display: "flex", gap: "15px"}} id="#contact">
-          <Link to={Bio.github} target="display" >
+        <Logos
+          className="logos"
+          style={{ display: "flex", gap: "15px" }}
+          id="#contact"
+        >
+          <Link to={Bio.github} target="display">
             <FaGithub />
           </Link>
-          <Link to={Bio.linkedin} target="display" >
+          <Link to={Bio.linkedin} target="display">
             <FaLinkedin />
           </Link>
-          <Link to={Bio.insta} target="display" >
+          <Link to={Bio.insta} target="display">
             <FaInstagram />
           </Link>
-          <Link to={Bio.twitter} target="display" >
+          <Link to={Bio.twitter} target="display">
             <FaTwitter />
           </Link>
-          <Link to={Bio.facebook} target="display" >
+          <Link to={Bio.facebook} target="display">
             <FaFacebook />
           </Link>
         </Logos>

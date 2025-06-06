@@ -1,10 +1,9 @@
-import React, { useContext, useState } from "react";
-import styled, { css, ThemeContext } from "styled-components";
+import React, {  useState } from "react";
+import styled from "styled-components";
 import { CgProfile } from "react-icons/cg";
 import { IoMenu } from "react-icons/io5";
 import { Bio } from "../../data/constants";
 import { Link } from "react-router-dom";
-import Switch from "../Cards/Bulb";
 
 const Nav = styled.div`
   background-color: transparent;
@@ -34,7 +33,6 @@ const NavContainer = styled.div`
   z-index: 1;
   width: 100%;
   padding: 0 24px;
-  max-width: 1200px;
 `;
 
 const NavLogo = styled.div`
@@ -157,8 +155,8 @@ const Navbar = () => {
     <Nav>
       <NavContainer>
         <NavLogo>
-          <a
-            href="#"
+          <Link
+            to="/"
             style={{
               display: "flex",
               alignItems: "center",
@@ -168,7 +166,7 @@ const Navbar = () => {
             }}
           >
             <CgProfile /> <Span>Portfolio</Span>
-          </a>
+          </Link>
         </NavLogo>
 
         <MobileIcon>

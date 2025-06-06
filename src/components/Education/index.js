@@ -14,7 +14,6 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   position: relative;
-  z-index: 1;
   align-items: center;
   padding: 50px 0px;
   margin-top:10px;
@@ -56,14 +55,15 @@ const Desc = styled.div`
 `;
 
 const TimeLineSection = styled.div`
-  // width: 100%;
-  // max-width: 1000px;
-  // margin-top: 10px;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // justify-content: center;
-  // gap: 12px;
+  z-index: 3;
+    // width: 100%;
+    // max-width: 1000px;
+    // margin-top: 10px;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+    // gap: 12px;
 
 `;
 

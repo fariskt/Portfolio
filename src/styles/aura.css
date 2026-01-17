@@ -1,0 +1,111 @@
+.hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+}
+
+/* ===============================
+   FLUID AURA FIELD
+================================ */
+
+.fluid-layer {
+  position: absolute;
+  inset: -30%;
+  filter: blur(120px);
+  opacity: 0.6;
+  animation: drift linear infinite;
+  will-change: transform;
+}
+
+/* Each layer has DIFFERENT motion + gradient */
+
+.fluid-1 {
+  background:
+    radial-gradient(
+      60% 40% at 30% 30%,
+      var(--accent),
+      transparent 70%
+    );
+  animation-duration: 38s;
+}
+
+.fluid-2 {
+  background:
+    radial-gradient(
+      50% 60% at 70% 40%,
+      var(--accent-muted),
+      transparent 75%
+    );
+  animation-duration: 52s;
+  animation-direction: reverse;
+}
+
+.fluid-3 {
+  background:
+    radial-gradient(
+      70% 50% at 50% 70%,
+      color-mix(in srgb, var(--foreground) 12%, transparent),
+      transparent 80%
+    );
+  animation-duration: 64s;
+}
+
+/* ===============================
+   MOTION = WATER FEEL
+================================ */
+
+@keyframes drift {
+  0% {
+    transform: translate(0%, 0%) scale(1);
+  }
+  25% {
+    transform: translate(-10%, 8%) scale(1.1);
+  }
+  50% {
+    transform: translate(8%, -12%) scale(1.15);
+  }
+  75% {
+    transform: translate(-6%, -4%) scale(1.05);
+  }
+  100% {
+    transform: translate(0%, 0%) scale(1);
+  }
+}
+
+/* ===============================
+   NOISE (DEPTH)
+================================ */
+
+.noise {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.08;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ===============================
+   CONTENT
+================================ */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 64rem;
+  text-align: center;
+}
+
+/* ===============================
+   ACCESSIBILITY
+================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .fluid-layer {
+    animation: none;
+  }
+}

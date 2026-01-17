@@ -1,26 +1,283 @@
 @import "tailwindcss";
 
+/* ----------------------------------------
+   ROOT THEME VARIABLES
+----------------------------------------- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Base colors */
+  --bg: #050505;
+  --surface-1: #0b0b0b;
+  --surface-2: #111111;
+  --border: #1a1a1a;
+
+  /* Text */
+  --text-main: #eaeaea;
+  --text-muted: #9a9a9a;
+  --text-dim: #6b6b6b;
+
+  /* Accent (your punch color) */
+  --accent: #8668f2;
+  --accent-2: #5a7cff;
+  --accent-glow: rgba(134, 104, 242, 0.55);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(
+    120deg,
+    #8668f2 0%,
+    #5a7cff 50%,
+    #9b7bff 100%
+  );
+
+  --gradient-soft: radial-gradient(
+    circle at top,
+    rgba(134, 104, 242, 0.18),
+    transparent 70%
+  );
+
+  /* Blur */
+  --blur-lg: blur(32px);
+  --blur-md: blur(16px);
+
+  /* Radius */
+  --radius-lg: 18px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ----------------------------------------
+   BASE RESET
+----------------------------------------- */
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text-main);
+  font-family: var(--font-sans, "Inter", system-ui, sans-serif);
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+/* Remove default tap highlight */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ----------------------------------------
+   TYPOGRAPHY SYSTEM
+----------------------------------------- */
+
+.text-display {
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  line-height: 0.95;
+  font-weight: 600;
+}
+
+.text-headline {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.text-body {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.text-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.text-body {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.text-mono {
+  font-family: var(--font-mono, "JetBrains Mono", monospace);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+/* Gradient text */
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ----------------------------------------
+   LUXURY BUTTON SYSTEM
+----------------------------------------- */
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1.4rem;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--gradient-primary);
+  color: black;
+  box-shadow: 0 0 40px var(--accent-glow);
+}
+
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-primary:hover::after {
+  opacity: 0.1;
+}
+
+.btn-outline {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-main);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ----------------------------------------
+   GLASS / SURFACE CARDS
+----------------------------------------- */
+
+.surface {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: var(--blur-md);
+}
+
+.surface-hover {
+  transition: all 0.4s ease;
+}
+
+.surface-hover:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(134, 104, 242, 0.4);
+  box-shadow: 0 0 40px rgba(134, 104, 242, 0.15);
+}
+
+/* ----------------------------------------
+   GRADIENT ORBS (Hero background)
+----------------------------------------- */
+
+.gradient-orb {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(134, 104, 242, 0.35),
+    transparent 70%
+  );
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+/* ----------------------------------------
+   NOISE / GRAIN OVERLAY
+----------------------------------------- */
+
+.noise::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ----------------------------------------
+   PARALLAX HELPERS
+----------------------------------------- */
+
+.parallax-slow {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.parallax-fast {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* ----------------------------------------
+   HOVER GLOW EFFECT
+----------------------------------------- */
+
+.hover-glow {
+  position: relative;
+}
+
+.hover-glow::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: var(--gradient-primary);
+  opacity: 0;
+  filter: blur(12px);
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.hover-glow:hover::after {
+  opacity: 0.6;
+}
+
+/* ----------------------------------------
+   CURSOR RIPPLE BASE
+----------------------------------------- */
+
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(
+    circle,
+    rgba(134, 104, 242, 0.4),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.ripple:hover::after {
+  opacity: 1;
+}
+
+/* ----------------------------------------
+   SCROLL REVEAL (for Framer / GSAP)
+----------------------------------------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
 }

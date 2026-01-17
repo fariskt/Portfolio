@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "../styles/skills.css";
 import { spaceGrotesk } from "./fonts";
-import LenisProvider from "../components/LenisProvider";
+import Providers from "../components/LenisProvider";
 
 const geistSans = Geist({
   subsets: ["latin"],
-  variable: "--font-sans",  
+  variable: "--font-sans",
   display: "swap",
 });
 
@@ -36,7 +37,7 @@ export default function RootLayout({
           antialiased
         `}
       >
-        <LenisProvider>{children}</LenisProvider>
+        {children}
       </body>
     </html>
   );

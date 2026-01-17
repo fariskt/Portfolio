@@ -1,0 +1,55 @@
+.spline-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #020617;
+  filter: saturate(120%);
+}
+
+/* Base blob style */
+.spline-blob {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  filter: blur(120px);
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+
+/* Blob colors */
+.blob-1 {
+  background: radial-gradient(
+    circle at 30% 30%,
+    #7dd3fc,
+    #3b82f6,
+    transparent 65%
+  );
+  top: 20%;
+  left: 10%;
+}
+
+.blob-2 {
+  background: radial-gradient(
+    circle at 70% 70%,
+    #a78bfa,
+    #6366f1,
+    transparent 65%
+  );
+  bottom: 15%;
+  right: 10%;
+}
+
+/* Diagonal light streak */
+.spline-streak {
+  position: absolute;
+  inset: -40%;
+  background: linear-gradient(
+    135deg,
+    transparent 40%,
+    rgba(180, 220, 255, 0.9) 50%,
+    transparent 60%
+  );
+  filter: blur(80px);
+  opacity: 0.6;
+}

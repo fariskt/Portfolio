@@ -1,0 +1,53 @@
+.skills-marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.skills-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 32px;
+  font-size: 14px;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.skill-item svg {
+  flex-shrink: 0;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.skill-item svg {
+  flex-shrink: 0;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

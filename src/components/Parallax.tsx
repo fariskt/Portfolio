@@ -2,6 +2,9 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Parallax({
   children,
@@ -16,7 +19,7 @@ export default function Parallax({
     const el = ref.current;
     if (!el) return;
 
-    gsap.to(el, {
+    const tween = gsap.to(el, {
       yPercent: speed * 100,
       ease: "none",
       scrollTrigger: {
@@ -24,6 +27,11 @@ export default function Parallax({
         scrub: true,
       },
     });
+
+    return () => {
+      tween.scrollTrigger?.kill();
+      tween.kill();
+    };
   }, [speed]);
 
   return <div ref={ref}>{children}</div>;

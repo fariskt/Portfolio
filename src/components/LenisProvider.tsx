@@ -1,18 +1,8 @@
 "use client";
 
-import React, { ReactNode, useEffect } from "react";
-import { lenis } from "../lib/lenis";
+import { useLenisGSAP } from "../lib/useLenisGsap";
 
-const LenisProvider = ({ children }: { children: ReactNode }) => {
-  useEffect(() => {
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-  }, []);
-
-  return <div>{children}</div>;
-};
-
-export default LenisProvider;
+export default function Providers({ children }: { children: React.ReactNode }) {
+  useLenisGSAP();
+  return <>{children}</>;
+}

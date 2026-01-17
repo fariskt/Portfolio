@@ -1,4 +1,3 @@
-import schoollogo from "../images/schoollogo.png";
 
 export const Bio = {
   name: "Muhammed Faris",
@@ -6,7 +5,7 @@ export const Bio = {
   description:
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/fariskt",
-  resume: "./mern-resume.pdf",
+  resume: "/works/mern-resume.pdf",
   linkedin: "https://www.linkedin.com/in/muhammedfariskt/",
   twitter: "https://twitter.com/FarisKT9",
   insta: "https://www.instagram.com/fariz.kt/",
@@ -78,7 +77,7 @@ export const skills = [
       },
       {
         name: "Mongodb",
-        image: "./mongodb.png",
+        image: "/works/mongodb.png",
       },
       {
         name: "Socket.io",
@@ -125,7 +124,7 @@ export const skills = [
 export const timeline = [
   {
     id: 0,
-    img: "./bridgeon-logo.ico",
+    img: "/works/bridgeon-logo.ico",
     school: "Bridgeon Solutions",
     date: "Aug 2024 - Present",
     highlight: "91%",
@@ -145,7 +144,7 @@ export const timeline = [
   },
   {
     id: 1,
-    img: schoollogo,
+    img: "",
     school: "AR NAGAR HSS, CHENDAPPURAYA",
     date: "Apr 2021 - Apr 2023",
     highlight: "91%",
@@ -155,14 +154,14 @@ export const timeline = [
   },
 ];
 
-export const projects = [
+export const works = [
   {
     id: 0,
     title: "Intellecta - AI Powered Educational Platform",
     date: "Jun 2023 - Jul 2023",
     description:
       "Intellecta is an interactive learning platform designed for students aged 4 to 18, offering personalized lessons, fun activities, and progress tracking to make learning engaging, effective, and age-appropriate.",
-    image: "./intellecta.png",
+    image: "/works/intellecta.png",
     tags: [
       "React.js",
       "TailwindCSS",
@@ -186,7 +185,7 @@ export const projects = [
     date: "Jun 2023 - Jul 2023",
     description:
       "Zynk, a modern MERN stack social media platform built with Next.js, where users can connect, engage, and communicate in real time",
-    image: "./zynk.png",
+    image: "/works/zynk.png",
     tags: [
       "Next.js",
       "TailwindCSS",
@@ -207,7 +206,7 @@ export const projects = [
     date: "Jun 2023 - Jul 2023",
     description:
       "Cashvio is a personal finance tracker that helps users manage budgets, set financial goals, and track daily expenses — empowering better money habits with a simple, intuitive interface.",
-    image: "./cashvio.png",
+    image: "/works/cashvio.png",
     tags: [
       "React",
       "TypeScript",
@@ -228,7 +227,7 @@ export const projects = [
     date: "Jun 2023 - Jul 2023",
     description:
       "A modern eCommerce furniture store featuring product listings, shopping cart, order management, and secure payments integrated with Razorpay — designed for a seamless shopping experience.",
-    image: "./luxspace.png",
+    image: "/works/luxspace.png",
     tags: [
       "React.js",
       "TailwindCSS",
@@ -248,7 +247,7 @@ export const projects = [
     date: "Apr 2023 - May 2023",
     description:
       "Movie search app , search any popular movies and series you want.",
-    image: "./movie-search.png",
+    image: "/works/movie-search.png",
     tags: ["React Js", "Html", "Css", "OMDb Api"],
     category: "web app",
     github: "https://github.com/fariskt/MovieSpace",

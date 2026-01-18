@@ -9,6 +9,7 @@ import ScrollWheel from "../components/ui/ScrollWheel";
 
 const HomePage = () => {
   useEffect(() => {
+    if (typeof window === "undefined") return;
     const handler = (e: MouseEvent) => {
       document.documentElement.style.setProperty(
         "--mx",

@@ -6,6 +6,8 @@ export default function Cursor() {
   const cursor = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
     const move = (e: MouseEvent) => {
       if (!cursor.current) return;
       cursor.current.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;

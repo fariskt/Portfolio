@@ -4,6 +4,7 @@ import "./globals.css";
 import "../styles/skills.css";
 import { spaceGrotesk } from "./fonts";
 import Providers from "../components/LenisProvider";
+import Script from "next/script";
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -29,6 +30,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-67K7E3VGGL"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-67K7E3VGGL');
+          `}
+        </Script>
+      </head>
       <body
         className={`
           ${geistSans.variable}

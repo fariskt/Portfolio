@@ -6,6 +6,7 @@ export default function ScrollWheel() {
   const dragging = useRef<boolean>(false);
 
   const updateThumb = () => {
+    if (typeof window === "undefined") return;
     if (!trackRef.current || !thumbRef.current) return;
 
     const scrollTop = window.scrollY;

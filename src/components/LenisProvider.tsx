@@ -1,8 +1,8 @@
-"use client";
+// "use client";
 
-import { useLenisGSAP } from "../lib/useLenisGsap";
+// import { useLenisGSAP } from "../lib/useLenisGsap";
 
-export default function Providers({ children }: { children: React.ReactNode }) {
-  useLenisGSAP();
-  return <>{children}</>;
-}
+// export default function Providers({ children }: { children: React.ReactNode }) {
+//   useLenisGSAP();
+//   return <>{children}</>;
+// }

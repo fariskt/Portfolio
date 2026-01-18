@@ -1,4 +1,3 @@
-// useLenisGSAP.ts
 "use client";
 
 import { useEffect } from "react";

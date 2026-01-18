@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -23,12 +23,17 @@ export default function ScrollWheel() {
   };
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
     updateThumb();
     window.addEventListener("scroll", updateThumb);
     return () => window.removeEventListener("scroll", updateThumb);
   }, []);
 
   useEffect(() => {
+    if (typeof window === "undefined" || typeof document === "undefined")
+      return;
+
     const onMouseMove = (e: MouseEvent) => {
       if (!dragging.current) return;
       if (!trackRef.current || !thumbRef.current) return;

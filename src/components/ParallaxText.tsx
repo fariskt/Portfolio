@@ -29,7 +29,7 @@ export default function ParallaxText({
   return (
     <div
       ref={ref}
-      className="pointer-events-none absolute inset-x-0 bottom-0 z-0"
+      className="pointer-events-none z-0"
     >
       {children}
     </div>

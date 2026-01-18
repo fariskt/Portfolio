@@ -65,6 +65,11 @@ body {
   font-family: var(--font-sans, "Inter", system-ui, sans-serif);
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Edge, Safari */
 }
 
 /* Remove default tap highlight */

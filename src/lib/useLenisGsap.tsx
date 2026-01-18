@@ -1,3 +1,4 @@
+// useLenisGSAP.ts
 "use client";
 
 import { useEffect } from "react";
@@ -8,50 +9,37 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  lerp: 0.08,
+  wheelMultiplier: 0.85,
   smoothWheel: true,
-  lerp: 0.01,
+  syncTouch: true,
 });
 
 export function useLenisGSAP() {
   useEffect(() => {
+    // GSAP ticker + lenis integration — most stable pattern 2024–2025
+    lenis.on("scroll", ScrollTrigger.update);
 
-    if(typeof window === "undefined") return
-
-    let rafId: number;
-
-    const raf = (time: number) => {
-      lenis.raf(time);
-      rafId = requestAnimationFrame(raf);
-    };
-
-    rafId = requestAnimationFrame(raf);
-
-    ScrollTrigger.scrollerProxy(document.body, {
-      scrollTop(value) {
-        if (value !== undefined) {
-          lenis.scrollTo(value, { immediate: true });
-        }
-        return lenis.scroll;
-      },
-      getBoundingClientRect() {
-        return {
-          top: 0,
-          left: 0,
-          width: window.innerWidth,
-          height: window.innerHeight,
-        };
-      },
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000); // important: ×1000
     });
 
-    const onScroll = () => ScrollTrigger.update();
-    lenis.on("scroll", onScroll);
+    // ← Almost always needed when using GSAP + Lenis
+    gsap.ticker.lagSmoothing(0);
 
-    ScrollTrigger.refresh();
+    // Force refresh after everything is mounted
+    setTimeout(() => {
+      ScrollTrigger.refresh(true);
+    }, 500);
 
     return () => {
-      lenis.off("scroll", onScroll);
-      cancelAnimationFrame(rafId);
-      ScrollTrigger.killAll();
+      gsap.ticker.remove(lenis.raf);
+      lenis.destroy();
+      ScrollTrigger.getAll().forEach((t) => t.kill());
     };
   }, []);
+
+  return null;
 }

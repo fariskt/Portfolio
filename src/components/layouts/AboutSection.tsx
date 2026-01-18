@@ -11,7 +11,7 @@ const AboutSection = () => {
         </h2>
         <div className="flex gap-4 mt-5">
           <div className="hover-focus hidden md:block">
-            <Image 
+            <Image
               src="/faris-me.jpeg"
               alt="Photo"
               className="h-full min-w-40 w-full object-cover glass bg-gradient-soft rounded-xl"
@@ -21,13 +21,21 @@ const AboutSection = () => {
           </div>
           <div className="space-y-5">
             <div className="grid grid-cols-3 items-start gap-5 ">
-              <div className="col-span-3 md:col-span-2 rounded-xl glass bg-gradient-soft pt-14 pb-10 px-10 hover-focus">
+              <div className="col-span-3 md:col-span-3 rounded-xl glass bg-gradient-soft pt-14 pb-10 px-10 hover-focus">
                 <h3 className="text-title text-gradient font-mono">
                   Software Developer building fast, secure, and reliable
                   applications—designed to grow and last. Focused on clean code,
                   thoughtful design, and real-world performance.
                 </h3>
               </div>
+              {/* <div>
+                <Image
+                  src="/about-me.png"
+                  alt="about-me"
+                  height={200}
+                  width={200}
+                />
+              </div> */}
             </div>
             <div className="grid grid-cols-2 md:grid-cols-7 gap-5">
               <div className="col-span-2 space-y-3 glass rounded-xl bg-gradient-soft p-6 hover-focus">

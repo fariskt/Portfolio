@@ -4,6 +4,8 @@ import React, { useEffect } from "react";
 import HeroSection from "../components/layouts/HeroSection";
 import AboutSection from "../components/layouts/AboutSection";
 import WorkSection from "../components/layouts/WorkSection";
+import Providers from "../components/LenisProvider";
+import ScrollWheel from "../components/ui/ScrollWheel";
 
 const HomePage = () => {
   useEffect(() => {
@@ -23,11 +25,14 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="w-full h-full">
-      <HeroSection />
-      <AboutSection/>
-      <WorkSection/>
-    </div>
+    <Providers>
+      <div className="w-full h-full">
+        <ScrollWheel />
+        <HeroSection />
+        <AboutSection />
+        <WorkSection />
+      </div>
+    </Providers>
   );
 };
 

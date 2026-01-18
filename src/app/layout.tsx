@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "../styles/skills.css";
+import "../styles/scrollwheel.css";
+import "../styles/lenis.css";
 import { spaceGrotesk } from "./fonts";
-import Providers from "../components/LenisProvider";
 import Script from "next/script";
 
 const geistSans = Geist({

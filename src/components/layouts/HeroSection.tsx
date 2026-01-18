@@ -23,7 +23,7 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-screen bg-black text-white">
-      <div className="smooth-bg">
+      <div className="smooth-bg flex flex-col justify-between">
         <div className="mx-auto grid grid-cols-1 items-start gap-10 px-6  md:grid-cols-2">
           <div className="flex flex-col justify-start">
             <div className="mb-6 h-px w-full bg-white/10" />
@@ -58,7 +58,7 @@ export default function HeroSection() {
           </div>
         </div>
         <ParallaxText speed={0.06}>
-          <div className="-bottom-[6vw] overflow-hidden">
+          <div>
             <h2 className="font-display text-[12vw] font-medium leading-none tracking-tight text-white">
               Muhammed Faris
             </h2>

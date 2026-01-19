@@ -33,10 +33,7 @@ export default function HeroSection() {
               SOFTWARE DEVELOPER
             </span>
 
-            <h1
-              ref={titleRef}
-              className="font-display text-[clamp(3rem,7vw,6.5rem)] font-medium leading-[0.95] tracking-tight"
-            >
+            <h1 ref={titleRef} className="heading-hero">
               BUILDING
               <br />
               DIGITAL

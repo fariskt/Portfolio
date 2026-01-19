@@ -6,7 +6,7 @@ const AboutSection = () => {
   return (
     <section className="min-h-screen bg-gradient-primary-dark rounded-t-4xl">
       <div className="max-w-6xl mx-auto py-20 px-5">
-        <h2 className="font-display text-[clamp(2rem,7vw,4.5rem)] font-medium leading-[0.95] tracking-tight">
+        <h2 className="heading-section">
           About ME
         </h2>
         <div className="flex gap-4 mt-5">

@@ -7,7 +7,7 @@ const WorkSection = () => {
     <Parallax speed={0.4}>
       <section className="min-h-screen bg-gradient-primary-dark rounded-t-4xl">
         <div className="py-20 md:px-10">
-          <h2 className="text-center font-display text-[clamp(2rem,7vw,4.5rem)] font-medium leading-[0.95] tracking-tight">
+          <h2 className="font-display text-[clamp(2rem,7vw,4.5rem)] font-medium leading-[0.95] tracking-tight">
             Featured Works
           </h2>
           <div className="mt-10">

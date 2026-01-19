@@ -6,6 +6,7 @@ import AboutSection from "../components/layouts/AboutSection";
 import WorkSection from "../components/layouts/WorkSection";
 import ScrollWheel from "../components/ui/ScrollWheel";
 import LenisProvider from "../lib/useLenisGsap";
+import Cursor from "../components/Cursor";
 
 const HomePage = () => {
   useEffect(() => {
@@ -28,9 +29,9 @@ const HomePage = () => {
 
   return (
     <>
-      {" "}
       <LenisProvider />
       <div className="w-full h-full">
+        <Cursor/>
         <ScrollWheel />
         <HeroSection />
         <AboutSection />

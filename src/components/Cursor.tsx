@@ -10,8 +10,9 @@ export default function Cursor() {
 
     const move = (e: MouseEvent) => {
       if (!cursor.current) return;
-      cursor.current.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+      cursor.current.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
     };
+
     window.addEventListener("mousemove", move);
     return () => window.removeEventListener("mousemove", move);
   }, []);
@@ -19,7 +20,15 @@ export default function Cursor() {
   return (
     <div
       ref={cursor}
-      className="pointer-events-none fixed left-0 top-0 z-50 h-16 w-16 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/10 backdrop-blur-md"
+      className="
+        pointer-events-none
+        fixed left-0 top-0 z-50
+        h-4 w-4
+        -translate-x-1/2 -translate-y-1/2
+        rounded-full
+        bg-lime-400
+        will-change-transform
+      "
     />
   );
 }

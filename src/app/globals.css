@@ -30,9 +30,10 @@
 
   --gradient-primary-dark: linear-gradient(
     120deg,
-    #07021b 0%,
-    #0a122a 50%,
-    #2b1f4a 100% /* dark violet */
+    #03010d 0%,
+    /* near-black */ #060b1f 40%,
+    /* deep navy */ #140c2e 70%,
+    /* dark indigo */ #24124a 100% /* rich violet */
   );
 
   --gradient-soft: radial-gradient(
@@ -91,6 +92,28 @@ body::-webkit-scrollbar {
   font-size: clamp(2rem, 4vw, 3.2rem);
   font-weight: 500;
   letter-spacing: -0.03em;
+}
+
+.heading-hero {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.heading-section {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  line-height: 1;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}
+
+.heading-tight {
+  line-height: 0.9;
 }
 
 .text-body {
@@ -282,11 +305,7 @@ body::-webkit-scrollbar {
   position: absolute;
   width: 120px;
   height: 120px;
-  background: radial-gradient(
-    circle,
-    rgba(134, 104, 242, 0.4),
-    transparent 70%
-  );
+  background: radial-gradient(circle, rgba(7, 116, 18, 0.4), transparent 70%);
   opacity: 0;
   transition: opacity 0.4s ease;
 }

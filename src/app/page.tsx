@@ -4,10 +4,9 @@ import React, { useEffect, useState } from "react";
 import HeroSection from "../components/layouts/HeroSection";
 import AboutSection from "../components/layouts/AboutSection";
 import WorkSection from "../components/layouts/WorkSection";
-import ScrollWheel from "../components/ui/ScrollWheel";
 import LenisProvider from "../lib/useLenisGsap";
-import Cursor from "../components/Cursor";
-import Navbar from "../components/Navbar";
+import ContactSection from "../components/layouts/ContactSection";
+
 
 const HomePage = () => {
   const [open, setOpen] = useState(false);
@@ -34,11 +33,10 @@ const HomePage = () => {
     <>
       <LenisProvider />
       <div className="w-full h-full">
-        <Cursor />
-        {!open && <ScrollWheel />}
         <HeroSection open={open} setOpen={setOpen} />
         <AboutSection />
         <WorkSection />
+        <ContactSection/>
       </div>
     </>
   );

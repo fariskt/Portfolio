@@ -62,7 +62,7 @@ const Navbar = ({
       <nav className="absolute top-0 right-0 z-50  items-center justify-between px-10 py-6">
         <button
           onClick={toggleMenu}
-          className="relative z-50 flex h-10 w-10 flex-col justify-between"
+          className="relative z-50 flex md:h-10 md:w-10 h-7 w-7 flex-col justify-between"
         >
           <span
             className={`block h-[2px] w-full bg-white transition ${
@@ -84,7 +84,7 @@ const Navbar = ({
 
       <div
         ref={menuRef}
-        className="fixed top-0 right-0 z-40 h-screen w-full md:w-[25%] bg-gradient-primary-dark backdrop-blur-xl"
+        className="fixed top-0 right-0 z-40 h-screen w-full md:w-[25%] backdrop-blur-xl"
       >
         <div className="flex h-full flex-col items-end justify-center gap-8 px-16">
           {links.map((item) => (

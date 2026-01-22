@@ -6,6 +6,7 @@ import "../styles/scrollwheel.css";
 import "../styles/lenis.css";
 import { spaceGrotesk } from "./fonts";
 import Script from "next/script";
+import Cursor from "../components/Cursor";
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -54,6 +55,7 @@ export default function RootLayout({
           antialiased
         `}
       >
+        <Cursor />
         {children}
       </body>
     </html>

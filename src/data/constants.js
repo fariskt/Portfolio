@@ -1,4 +1,3 @@
-
 export const Bio = {
   name: "Muhammed Faris",
   roles: ["Full Stack Developer", "Frontend Developer", "Backend Developer"],
@@ -155,6 +154,26 @@ export const timeline = [
 ];
 
 export const works = [
+  {
+    id: 2,
+    title: "Copy Clash Base – Clash of Clans Layout Sharing",
+    date: "2024",
+    description:
+      "Copy Clash Base is a website that helps Clash of Clans players easily copy and use base layouts. It supports all Town Halls from TH1 to TH17, including both Home Village and Builder Base. Players can browse layouts and copy them directly into the game with a single click.",
+    image: "/works/copyclashbase.png",
+    tags: [
+      "Clash of Clans",
+      "Web App",
+      "Game Utility",
+      "Base Layouts",
+      "TH1–TH17",
+      "Home Village",
+      "Builder Base",
+    ],
+    category: "web app",
+    github: "", // add if you want, or remove this key
+    webapp: "https://copyclashbase.vercel.app",
+  },
   {
     id: 0,
     title: "Intellecta - AI Powered Educational Platform",

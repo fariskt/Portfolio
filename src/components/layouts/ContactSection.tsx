@@ -19,7 +19,7 @@ const ContactSection = () => {
 
         <div className="flex justify-center gap-6 flex-wrap">
           <Link
-            href="https://instagram.com/yourusername"
+            href="https://instagram.com/farizkt"
             target="_blank"
             className="glass px-6 py-3 rounded-full hover-focus transition
                inline-flex items-center gap-2"
@@ -29,7 +29,7 @@ const ContactSection = () => {
           </Link>
 
           <Link
-            href="https://linkedin.com/in/yourusername"
+            href="https://linkedin.com/in/muhammedfariskt"
             target="_blank"
             className="glass px-6 py-3 rounded-full hover-focus transition
                inline-flex gap-2"
@@ -39,7 +39,7 @@ const ContactSection = () => {
           </Link>
 
           <Link
-            href="mailto:yourmail@gmail.com"
+            href="mailto:fariskt00@gmail.com"
             className="glass px-6 py-3 rounded-full hover-focus transition
                inline-flex items-center gap-2"
           >
@@ -48,12 +48,12 @@ const ContactSection = () => {
           </Link>
 
           <Link
-            href="https://github.com/yourusername"
+            href="https://github.com/fariskt"
             target="_blank"
             className="glass px-6 py-3 rounded-full hover-focus transition
                flex items-center gap-2"
           >
-            <GithubIcon size={36}/>
+            <GithubIcon size={20}/>
             <span>GitHub</span>
           </Link>
         </div>

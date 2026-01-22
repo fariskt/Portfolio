@@ -27,7 +27,7 @@ const WorkSection = () => {
                         className="
               absolute inset-0
               bg-black/60 backdrop-blur-sm
-              flex items-center justify-center gap-4
+              flex items-center justify-center gap-4 rounded-xl
               opacity-0 group-hover:opacity-100
               transition-opacity duration-300
             "
@@ -54,8 +54,6 @@ const WorkSection = () => {
                       </div>
                     </div>
                   )}
-
-                  {/* Title */}
                   <h3 className="text-xs font-mono mt-2">{item.title}</h3>
                 </div>
               </div>

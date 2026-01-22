@@ -1,14 +1,17 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import HeroSection from "../components/layouts/HeroSection";
 import AboutSection from "../components/layouts/AboutSection";
 import WorkSection from "../components/layouts/WorkSection";
 import ScrollWheel from "../components/ui/ScrollWheel";
 import LenisProvider from "../lib/useLenisGsap";
 import Cursor from "../components/Cursor";
+import Navbar from "../components/Navbar";
 
 const HomePage = () => {
+  const [open, setOpen] = useState(false);
+
   useEffect(() => {
     if (typeof window === "undefined") return;
 
@@ -31,9 +34,9 @@ const HomePage = () => {
     <>
       <LenisProvider />
       <div className="w-full h-full">
-        <Cursor/>
-        <ScrollWheel />
-        <HeroSection />
+        <Cursor />
+        {!open && <ScrollWheel />}
+        <HeroSection open={open} setOpen={setOpen} />
         <AboutSection />
         <WorkSection />
       </div>

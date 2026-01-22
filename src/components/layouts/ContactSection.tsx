@@ -9,7 +9,7 @@ import {
 
 const ContactSection = () => {
   return (
-    <section className="py-24 px-5">
+    <section id="contact" className="py-24 px-5">
       <div className="max-w-5xl mx-auto text-center space-y-10">
         <h2 className="heading-section">Let’s Connect</h2>
 

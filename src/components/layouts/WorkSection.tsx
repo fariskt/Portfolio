@@ -5,7 +5,7 @@ import Parallax from "../Parallax";
 import Link from "next/link";
 const WorkSection = () => {
   return (
-    <section className="min-h-screen rounded-t-4xl">
+    <section id="work" className="min-h-screen rounded-t-4xl">
       <div className="md:py-20 px-5 max-w-7xl mx-auto">
         <h2 className="heading-section">Featured Works</h2>
         <div className="mt-10">
@@ -13,7 +13,6 @@ const WorkSection = () => {
             {works.map((item) => (
               <div className="p-6" key={item.id}>
                 <div className="relative w-full p-2 glass rounded-3xl overflow-hidden group">
-                  {/* Image */}
                   {item.image && (
                     <div className="relative w-full aspect-[4/2.1] hover-video rounded-xl overflow-hidden">
                       <Image

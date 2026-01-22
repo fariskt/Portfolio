@@ -12,10 +12,10 @@ const Navbar = ({
   setOpen: (val: boolean) => void;
 }) => {
   const links = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/projects" },
-    { name: "Work", href: "/work" },
-    { name: "Contact Me", href: "/contact" },
+    { name: "Home", href: "#" },
+    { name: "About", href: "#about" },
+    { name: "Work", href: "#work" },
+    { name: "Contact Me", href: "#contact" },
   ];
 
   const menuRef = useRef<HTMLDivElement>(null);
@@ -88,15 +88,27 @@ const Navbar = ({
       >
         <div className="flex h-full flex-col items-end justify-center gap-8 px-16">
           {links.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              onClick={toggleMenu}
-              className="text-white hover:underline text-4xl font-medium tracking-tight hover:opacity-70 transition"
-            >
-              {item.name}
-            </Link>
-          ))}
+  <button
+    key={item.href}
+    onClick={() => {
+      const id = item.href.replace("#", "");
+      const el = document.getElementById(id);
+
+      if (el) {
+        el.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+
+      toggleMenu();
+    }}
+    className="nav-link text-white text-4xl font-medium tracking-tight hover:opacity-70 transition"
+  >
+    {item.name}
+  </button>
+))}
+
         </div>
       </div>
     </>

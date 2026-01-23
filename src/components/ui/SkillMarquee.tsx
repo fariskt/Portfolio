@@ -22,7 +22,7 @@ const skills = [
 ];
 const SkillMarquee = () => {
   return (
-    <div className="skills-marquee mt-10  glass p-3 rounded-3xl">
+    <div className="skills-marquee glass p-3 rounded-3xl">
       <div className="skills-track">
         {[...skills, ...skills].map((tech, i) => {
           const Icon = Icons[tech as keyof typeof Icons];

@@ -4,7 +4,7 @@ import SkillMarquee from "../ui/SkillMarquee";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="md:min-h-screen h-[70vh] rounded-t-4xl">
+    <section id="about" className="border-b border-b-gray-800 md:min-h-screen h-[70vh] rounded-t-4xl">
       <div className="md:mb-20 mt-20 px-5 max-w-7xl mx-auto">
         <h2 className="heading-section mb-12">About Me</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-start">
@@ -29,11 +29,6 @@ const AboutSection = () => {
               </h3>
             </div>
           </div>
-        </div>
-
-        {/* Skills */}
-        <div className="mt-16">
-          <SkillMarquee />
         </div>
       </div>
     </section>

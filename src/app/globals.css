@@ -582,49 +582,16 @@ body::-webkit-scrollbar {
   }
 }
 
-.water-text {
-  position: relative;
+.wave-text {
   display: inline-block;
-  color: white;
-  background: linear-gradient(
-    120deg,
-    #7dd3fc,
-    #38bdf8,
-    #0ea5e9,
-    #7dd3fc
-  );
-  background-size: 300% 300%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: background-position 0.5s ease;
 }
 
-.water-text:hover {
-  animation: waterFlow 2.5s linear infinite;
+.wave-text span {
+  display: inline-block;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-@keyframes waterFlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 300% 50%;
-  }
-}
-.water-text::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at 30% 30%,
-    rgba(255, 255, 255, 0.35),
-    transparent 60%
-  );
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.water-text:hover::after {
-  opacity: 1;
+.wave-text:hover span {
+  transition-delay: calc(var(--i) * 45ms);
+  transform: translateY(-4px);
 }

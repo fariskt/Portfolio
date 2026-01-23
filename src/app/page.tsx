@@ -6,7 +6,8 @@ import AboutSection from "../components/layouts/AboutSection";
 import WorkSection from "../components/layouts/WorkSection";
 import LenisProvider from "../lib/useLenisGsap";
 import ContactSection from "../components/layouts/ContactSection";
-
+import SkillMarquee from "../components/ui/SkillMarquee";
+import ExpertiseSection from "../components/layouts/ExpertiseSection";
 
 const HomePage = () => {
   const [open, setOpen] = useState(false);
@@ -32,11 +33,11 @@ const HomePage = () => {
   return (
     <>
       <LenisProvider />
-      <div className="w-full h-full">
+      <div className="relative w-full h-full">
         <HeroSection open={open} setOpen={setOpen} />
-        <AboutSection />
         <WorkSection />
-        <ContactSection/>
+        <ExpertiseSection/>
+        <ContactSection />
       </div>
     </>
   );

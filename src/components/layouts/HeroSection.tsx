@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { splitReveal } from "../../lib/splitText";
 import ParallaxText from "../ParallaxText";
 import Navbar from "../Navbar";
-import LiquidText from "../effects/LiquidText";
+import WaveText from "../ui/WaveText";
 
 export default function HeroSection({
   open,
@@ -23,7 +23,7 @@ export default function HeroSection({
     <>
       <Navbar open={open} setOpen={setOpen} />
 
-      <section className="relative md:min-h-screen text-white">
+      <section className="relative border-b border-b-gray-800 md:min-h-screen text-white">
         <div className="md:h-screen h-[75vh] flex flex-col justify-between">
           <div className="grid grid-cols-1 items-start gap-10 px-6 md:grid-cols-2">
             <div className="flex flex-col justify-start">
@@ -43,13 +43,7 @@ export default function HeroSection({
               </h1>
             </div>
           </div>
-          <ParallaxText speed={0.06}>
-            <div className="ml-5">
-              <h2 className="heading-hero">
-                MUHAMMED FARIS
-              </h2>
-            </div>
-          </ParallaxText>
+          <WaveText className="heading-hero ml-5" text="MUHAMMED FARIS" />
         </div>
       </section>
     </>

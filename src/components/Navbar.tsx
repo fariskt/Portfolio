@@ -13,7 +13,7 @@ const Navbar = ({
 }) => {
   const links = [
     { name: "Home", href: "#" },
-    { name: "About", href: "#about" },
+    { name: "About", href: "#contact" },
     { name: "Work", href: "#work" },
     { name: "Contact Me", href: "#contact" },
   ];
@@ -88,27 +88,26 @@ const Navbar = ({
       >
         <div className="flex h-full flex-col items-end justify-center gap-8 px-16">
           {links.map((item) => (
-  <button
-    key={item.href}
-    onClick={() => {
-      const id = item.href.replace("#", "");
-      const el = document.getElementById(id);
+            <button
+              key={item.href}
+              onClick={() => {
+                const id = item.href.replace("#", "");
+                const el = document.getElementById(id);
 
-      if (el) {
-        el.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      }
+                if (el) {
+                  el.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }
 
-      toggleMenu();
-    }}
-    className="nav-link text-white text-4xl font-medium tracking-tight hover:opacity-70 transition"
-  >
-    {item.name}
-  </button>
-))}
-
+                toggleMenu();
+              }}
+              className=" text-white text-4xl font-medium tracking-tight hover:opacity-70 transition"
+            >
+              {item.name}
+            </button>
+          ))}
         </div>
       </div>
     </>

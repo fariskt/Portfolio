@@ -5,14 +5,15 @@ import Parallax from "../Parallax";
 import Link from "next/link";
 const WorkSection = () => {
   return (
-    <section id="work" className="min-h-screen rounded-t-4xl">
-      <div className="md:py-20 px-5 max-w-7xl mx-auto">
-        <h2 className="heading-section">Featured Works</h2>
+    <section id="work" className="border-b border-b-gray-800 min-h-screen rounded-t-4xl">
+      <div className="md:py-20 mx-auto">
+        <h2 className="heading-section px-5">Featured Works</h2>
         <div className="mt-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2">
             {works.map((item) => (
-              <div className="p-6" key={item.id}>
-                <div className="relative w-full p-2 glass rounded-3xl overflow-hidden group">
+              <div key={item.id}>
+                <div className="relative p-6 w-full border border-gray-800 overflow-hidden group">
+                  <h3 className="text-base font-mono my-2">{item.title}</h3>
                   {item.image && (
                     <div className="relative w-full aspect-[4/2.1] hover-video rounded-xl overflow-hidden">
                       <Image
@@ -53,7 +54,6 @@ const WorkSection = () => {
                       </div>
                     </div>
                   )}
-                  <h3 className="text-xs font-mono mt-2">{item.title}</h3>
                 </div>
               </div>
             ))}

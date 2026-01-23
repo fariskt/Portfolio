@@ -155,7 +155,7 @@ export const timeline = [
 
 export const works = [
   {
-    id: 2,
+    id: 5,
     title: "Copy Clash Base – Clash of Clans Layout Sharing",
     date: "2024",
     description:
@@ -238,38 +238,5 @@ export const works = [
     category: "web app",
     github: "https://github.com/fariskt/cashvio",
     webapp: "https://cashvio.vercel.app/",
-  },
-
-  {
-    id: 3,
-    title: "Luxspace - eCommerce Furniture Platform",
-    date: "Jun 2023 - Jul 2023",
-    description:
-      "A modern eCommerce furniture store featuring product listings, shopping cart, order management, and secure payments integrated with Razorpay — designed for a seamless shopping experience.",
-    image: "/works/luxspace.png",
-    tags: [
-      "React.js",
-      "TailwindCSS",
-      "TypeScript",
-      "Redux",
-      "Node.js",
-      "Express.js",
-      "Mongodb",
-    ],
-    category: "web app",
-    github: "https://github.com/fariskt/luxspace",
-    webapp: "https://luxspace-1.onrender.com/",
-  },
-  {
-    id: 4,
-    title: "MovieSpace",
-    date: "Apr 2023 - May 2023",
-    description:
-      "Movie search app , search any popular movies and series you want.",
-    image: "/works/movie-search.png",
-    tags: ["React Js", "Html", "Css", "OMDb Api"],
-    category: "web app",
-    github: "https://github.com/fariskt/MovieSpace",
-    webapp: "https://movie-space-nine.vercel.app/",
   },
 ];

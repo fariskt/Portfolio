@@ -89,7 +89,7 @@ const Navbar = ({
         <div className="flex h-full flex-col items-end justify-center gap-8 px-16">
           {links.map((item) => (
             <button
-              key={item.href}
+              key={item.name}
               onClick={() => {
                 const id = item.href.replace("#", "");
                 const el = document.getElementById(id);

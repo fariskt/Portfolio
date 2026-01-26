@@ -4,6 +4,8 @@ import "./globals.css";
 import "../styles/skills.css";
 import "../styles/scrollwheel.css";
 import "../styles/lenis.css";
+import "../styles/Premium3DObject.css";
+
 import { spaceGrotesk } from "./fonts";
 import Script from "next/script";
 import Cursor from "../components/Cursor";

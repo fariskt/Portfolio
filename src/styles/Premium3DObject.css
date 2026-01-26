@@ -1,0 +1,82 @@
+/* Wrapper gives perspective */
+.premium-3d-wrapper {
+  perspective: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main 3D object */
+.premium-3d-object {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  border-radius: 48px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 40px 90px rgba(0, 0, 0, 0.6),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+
+  transform-style: preserve-3d;
+  animation: premiumFloat 6s ease-in-out infinite;
+  transition: transform 0.6s ease;
+}
+
+/* Inner depth layer */
+.premium-3d-inner-surface {
+  position: absolute;
+  inset: 16px;
+  border-radius: 36px;
+
+  background:
+    radial-gradient(circle at 30% 30%, #6b82ff, transparent 60%),
+    linear-gradient(180deg, #0c102e, #06081a);
+
+  transform: translateZ(28px);
+}
+
+/* Curved neon glow ring */
+.premium-3d-glow-ring {
+  position: absolute;
+  inset: -45px;
+  border-radius: 50%;
+
+  background: conic-gradient(
+    from 180deg,
+    transparent,
+    #5f7cff,
+    #8fa2ff,
+    transparent
+  );
+
+  filter: blur(32px);
+  opacity: 0.85;
+  transform: translateZ(-20px);
+}
+
+/* Hover interaction */
+.premium-3d-object:hover {
+  transform: rotateX(12deg) rotateY(-14deg);
+}
+
+/* Floating animation */
+@keyframes premiumFloat {
+  0% {
+    transform: translateY(0) rotateX(0) rotateY(0);
+  }
+  50% {
+    transform: translateY(-18px) rotateX(6deg) rotateY(-6deg);
+  }
+  100% {
+    transform: translateY(0) rotateX(0) rotateY(0);
+  }
+}

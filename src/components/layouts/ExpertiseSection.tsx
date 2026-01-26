@@ -32,7 +32,7 @@ const expertise = [
 const ExpertiseSection = () => {
   return (
     <section id="expertise" className="border-b border-gray-800 rounded-t-4xl">
-      <div className="md:py-24 mx-auto">
+      <div className="md:py-24 py-10 mx-auto">
         <h2 className="heading-section px-5">Skills & Expertise</h2>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-1">

@@ -6,7 +6,7 @@ import Link from "next/link";
 const WorkSection = () => {
   return (
     <section id="work" className="border-b border-b-gray-800 min-h-screen rounded-t-4xl">
-      <div className="md:py-20 mx-auto">
+      <div className="py-20 mx-auto">
         <h2 className="heading-section px-5">Featured Works</h2>
         <div className="mt-10">
           <div className="grid grid-cols-1 md:grid-cols-2">

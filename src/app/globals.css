@@ -103,6 +103,16 @@ body::-webkit-scrollbar {
   text-transform: uppercase;
 }
 
+.heading-hero-secondary {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2.5rem, 7vw, 6.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+
 .heading-section {
   font-family: var(--font-display);
   font-weight: 500;
@@ -594,4 +604,85 @@ body::-webkit-scrollbar {
 .wave-text:hover span {
   transition-delay: calc(var(--i) * 45ms);
   transform: translateY(-4px);
+}
+
+
+.hero-3d-video-wrapper {
+  perspective: 1200px;
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main container */
+.hero-3d-video-object {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  border-radius: 48px;
+  overflow: hidden;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
+
+  box-shadow:
+    0 40px 90px rgba(0, 0, 0, 0.6),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  transform-style: preserve-3d;
+  animation: heroVideoFloat 6s ease-in-out infinite;
+}
+
+/* Actual video */
+.hero-3d-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 48px;
+  transform: translateZ(30px) scale(1.02);
+}
+
+/* Neon ambient glow */
+.hero-3d-video-glow {
+  position: absolute;
+  inset: -40px;
+  border-radius: 50%;
+
+  background: conic-gradient(
+    from 180deg,
+    transparent,
+    #5f7cff,
+    #8fa2ff,
+    transparent
+  );
+
+  filter: blur(32px);
+  opacity: 0.85;
+  z-index: -1;
+}
+
+/* Hover tilt */
+.hero-3d-video-object:hover {
+  transform: rotateX(12deg) rotateY(-14deg);
+  transition: transform 0.6s ease;
+}
+
+/* Floating animation */
+@keyframes heroVideoFloat {
+  0% {
+    transform: translateY(0) rotateX(0) rotateY(0);
+  }
+  50% {
+    transform: translateY(-18px) rotateX(6deg) rotateY(-6deg);
+  }
+  100% {
+    transform: translateY(0) rotateX(0) rotateY(0);
+  }
 }

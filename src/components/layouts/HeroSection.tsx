@@ -56,7 +56,7 @@ export default function HeroSection({
                 />
               </div>
               {/* <small>testing</small> */}
-            </div> */}
+            {/* </div>  */}
           </div>
           <WaveText
             className="heading-hero-secondary ml-5"

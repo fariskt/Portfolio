@@ -42,7 +42,7 @@ export default function HeroSection({
               </h1>
             </div>
 
-            <div className="hero-3d-video-wrapper">
+            {/* <div className="hero-3d-video-wrapper">
               <div className="hero-3d-video-object">
                 <span className="hero-3d-video-glow" />
 
@@ -56,7 +56,7 @@ export default function HeroSection({
                 />
               </div>
               {/* <small>testing</small> */}
-            </div>
+            </div> */}
           </div>
           <WaveText
             className="heading-hero-secondary ml-5"

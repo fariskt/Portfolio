@@ -22,8 +22,8 @@ const spaceGrotesk = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Faris — Software Developer",
-  description: "Building premium digital experiences with motion & clarity",
+  title: "Muhammed Faris — Full Stack Developer",
+  description: "Full Stack Developer portfolio showcasing technical skills, engineering experience, and selected personal projects.",
 };
 
 export default function RootLayout({

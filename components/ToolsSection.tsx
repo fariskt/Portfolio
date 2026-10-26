@@ -70,8 +70,8 @@ export default function ToolsSection() {
     <section id="tools" className="space-y-8 pt-12">
       {/* Stacked Section Header */}
       <div className="space-y-1">
-        <h2 className="title-primary">PREMIUM</h2>
-        <h3 className="title-secondary">TOOLS</h3>
+        <h2 className="title-primary">Tech</h2>
+        <h3 className="title-secondary">Stack</h3>
       </div>
 
       <p className="text-sm text-white/60 font-sans max-w-xl">

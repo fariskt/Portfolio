@@ -160,7 +160,7 @@ export default function Works() {
             <span className="text-lime-400 transition-transform group-hover:translate-x-1">→</span>
           </Link>
           <span className="text-xs font-mono text-white/40">
-            Explore complete archives across Web Apps, Full-Stack, AI & Backend
+            Explore personal projects across Web Apps, Full-Stack, and Interactive Platforms
           </span>
         </div>
       </div>

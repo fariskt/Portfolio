@@ -14,7 +14,7 @@ export default function HeroSection() {
     <section id="hero" className="space-y-10 pt-2">
       {/* Big Stacked Hero Headline */}
       <div className="space-y-1">
-        <h1 className="title-primary">SOFTWARE</h1>
+        <h1 className="title-primary">FULL STACK</h1>
         <h2 className="title-secondary">DEVELOPER</h2>
       </div>
 

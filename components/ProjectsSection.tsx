@@ -10,7 +10,7 @@ export default function ProjectsSection() {
       {/* Stacked Section Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div className="space-y-1">
-          <h2 className="title-primary">RECENT</h2>
+          <h2 className="title-primary">SELECTED</h2>
           <h3 className="title-secondary">PROJECTS</h3>
         </div>
         <Link

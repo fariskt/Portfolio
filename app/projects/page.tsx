@@ -53,18 +53,18 @@ export default function ProjectsPage() {
           </Link>
           <span className="font-mono text-xs text-lime-400 flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-lime-400 animate-pulse" />
-            MUHAMMED FARIS • PROJECT ARCHIVES
+            MUHAMMED FARIS • SELECTED PROJECTS
           </span>
         </div>
 
         {/* Stacked Page Header */}
         <div className="space-y-4">
           <div className="space-y-1">
-            <h1 className="title-primary">ALL</h1>
+            <h1 className="title-primary">SELECTED</h1>
             <h2 className="title-secondary">PROJECTS</h2>
           </div>
           <p className="text-sm md:text-base text-white/60 max-w-2xl font-sans leading-relaxed">
-            A comprehensive catalog of {allProjects.length} applications, enterprise systems, and engineering projects developed across web platforms, AI tools, and APIs.
+            A curated showcase of personal engineering projects and web applications developed with modern frontend frameworks, scalable backends, and interactive features.
           </p>
         </div>
 
@@ -188,7 +188,7 @@ export default function ProjectsPage() {
           <Link href="/" className="hover:text-lime-400 transition">
             ← Return to Portfolio Home
           </Link>
-          <p>© {new Date().getFullYear()} Muhammed Faris — All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Muhammed Faris — Full Stack Developer</p>
         </div>
       </div>
     </main>

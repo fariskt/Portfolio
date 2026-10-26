@@ -34,7 +34,7 @@ export default function Hero() {
             <div className="mb-6 h-px w-full bg-white/10" />
             <span className="mb-6 inline-flex items-center gap-2 text-xs tracking-[0.35em] text-white/60">
               <span className="h-2 w-2 rounded-full bg-lime-400" />
-              SOFTWARE DEVELOPER
+              FULL STACK DEVELOPER
             </span>
             <h1 ref={textRef} className="heading-hero">
               BUILDING<br />DIGITAL<br />EXPERIENCES.

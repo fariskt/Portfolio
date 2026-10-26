@@ -76,7 +76,7 @@ export default function ProfileSidebar() {
               Muhammed Faris
             </h1>
             <p className="text-xs font-mono text-lime-400 tracking-wider">
-              SOFTWARE DEVELOPER
+              FULL STACK DEVELOPER
             </p>
           </div>
 
@@ -87,7 +87,7 @@ export default function ProfileSidebar() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-lime-400"></span>
               </span>
-              Available for projects
+              Full Stack Developer
             </span>
           </div>
 
@@ -128,7 +128,7 @@ export default function ProfileSidebar() {
 
           <div className="text-center">
             <p className="text-[11px] font-mono text-white/40 uppercase tracking-wider">
-              Based in India • Available Worldwide
+              Full Stack Developer • Based in India
             </p>
           </div>
         </div>

@@ -16,12 +16,12 @@ export default function ContactSection() {
     <section id="contact" className="space-y-8 pt-12 pb-16">
       {/* Stacked Section Header */}
       <div className="space-y-1">
-        <h2 className="title-primary">LET&apos;S WORK</h2>
-        <h3 className="title-secondary">TOGETHER</h3>
+        <h2 className="title-primary">GET IN</h2>
+        <h3 className="title-secondary">TOUCH</h3>
       </div>
 
       <p className="text-sm md:text-base text-white/70 max-w-xl font-sans">
-        Have an exciting project, full-stack opening, or collaboration in mind? Feel free to reach out directly.
+        Have a question, technical topic to discuss, or looking to connect? Feel free to reach out directly.
       </p>
 
       {/* Form Container */}
@@ -49,12 +49,11 @@ export default function ContactSection() {
           </div>
 
           <div className="space-y-2">
-            <label className="text-xs font-mono text-white/60 uppercase">Service / Topic</label>
+            <label className="text-xs font-mono text-white/60 uppercase">Subject / Topic</label>
             <select className="form-input cursor-pointer bg-[#18181c]">
-              <option value="fullstack">Full-Stack Web Application (Next.js / Node.js)</option>
-              <option value="frontend">Frontend Architecture & UI Engineering</option>
-              <option value="backend">Node.js & Express Backend Systems</option>
-              <option value="consulting">Technical Consulting / Freelance Collaboration</option>
+              <option value="general">General Inquiry & Networking</option>
+              <option value="engineering">Technical & Engineering Discussion</option>
+              <option value="projects">Personal Projects & Open Source</option>
               <option value="other">Other</option>
             </select>
           </div>
@@ -64,7 +63,7 @@ export default function ContactSection() {
             <textarea
               required
               rows={4}
-              placeholder="Tell me about your project, timeline, and requirements..."
+              placeholder="Write your message, thought, or inquiry here..."
               className="form-input resize-none"
             />
           </div>
@@ -80,7 +79,7 @@ export default function ContactSection() {
               </span>
             ) : (
               <>
-                <span>Submit Message</span>
+                <span>Send Message</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="7" y1="17" x2="17" y2="7" />
                   <polyline points="7 7 17 7 17 17" />
@@ -92,7 +91,7 @@ export default function ContactSection() {
 
         {/* Direct Email Link */}
         <div className="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span className="text-xs font-mono text-white/50">Or contact directly via email:</span>
+          <span className="text-xs font-mono text-white/50">Or reach out directly via email:</span>
           <Link
             href="mailto:fariskt00@gmail.com"
             className="text-sm font-mono text-lime-400 hover:underline flex items-center gap-1.5"
@@ -105,10 +104,10 @@ export default function ContactSection() {
 
       {/* Footer */}
       <footer className="pt-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-white/40 border-t border-white/5">
-        <p>© {new Date().getFullYear()} Muhammed Faris — Software Developer</p>
+        <p>© {new Date().getFullYear()} Muhammed Faris — Full Stack Developer</p>
         <div className="flex items-center gap-4">
           <Link href="/projects" className="hover:text-lime-400 transition">
-            Projects Archive
+            Selected Projects
           </Link>
           <span>•</span>
           <Link href="https://github.com/fariskt" target="_blank" rel="noopener noreferrer" className="hover:text-lime-400 transition">

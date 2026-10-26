@@ -7,7 +7,7 @@ export default function ExperienceSection() {
     <section id="experience" className="space-y-8 pt-12">
       {/* Stacked Section Header */}
       <div className="space-y-1">
-        <h2 className="title-primary">PROFESSIONAL</h2>
+        <h2 className="title-primary">TECHNICAL</h2>
         <h3 className="title-secondary">EXPERIENCE</h3>
       </div>
 

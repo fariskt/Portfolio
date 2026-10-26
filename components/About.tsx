@@ -15,7 +15,7 @@ export default function About() {
           />
         </div>
         <p className="font-mono leading-relaxed">
-          Software Developer focused on building fast, secure, and scalable web applications. I work across frontend and backend to deliver clean, maintainable solutions with thoughtful design and real-world performance in mind.
+          Full Stack Developer focused on building fast, secure, and scalable web applications. I work across frontend and backend systems to deliver clean, maintainable code with thoughtful architecture and real-world performance.
         </p>
       </div>
     </div>
